@@ -169,7 +169,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 via-indigo-500/10 to-indigo-600/10"
+          className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 via-indigo-500/10 to-indigo-600/10 pointer-events-none"
           animate={{
             opacity: [0.3, 0.6, 0.3],
             scale: [1, 1.05, 1],
@@ -181,7 +181,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute inset-0 bg-gradient-to-tl from-indigo-400/10 via-indigo-500/10 to-indigo-600/10"
+          className="absolute inset-0 bg-gradient-to-tl from-indigo-400/10 via-indigo-500/10 to-indigo-600/10 pointer-events-none"
           animate={{
             opacity: [0.2, 0.5, 0.2],
             x: [0, 20, 0],
@@ -213,7 +213,7 @@ const Hero = () => {
       />
 
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.3'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",

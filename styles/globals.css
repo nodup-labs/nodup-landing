@@ -224,7 +224,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-peyda);
 }
 
 /** Smooth scroll **/
@@ -239,4 +239,53 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/font/woff2/PeydaWebFaNum-Thin.woff2") format("woff2"),
+    url("/font/woff/PeydaWebFaNum-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/font/woff2/PeydaWebFaNum-Light.woff2") format("woff2"),
+    url("/font/woff/PeydaWebFaNum-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/font/woff2/PeydaWebFaNum-Regular.woff2") format("woff2"),
+    url("/font/woff/PeydaWebFaNum-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/font/woff2/PeydaWebFaNum-SemiBold.woff2") format("woff2"),
+    url("/font/woff/PeydaWebFaNum-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/font/woff2/PeydaWebFaNum-Bold.woff2") format("woff2"),
+    url("/font/woff/PeydaWebFaNum-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/font/woff2/PeydaWebFaNum-ExtraBold.woff2") format("woff2"),
+    url("/font/woff/PeydaWebFaNum-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Peyda";
+  src: url("/font/woff2/PeydaWebFaNum-Black.woff2") format("woff2"),
+    url("/font/woff/PeydaWebFaNum-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
 }

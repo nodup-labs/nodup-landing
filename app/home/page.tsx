@@ -1,5 +1,7 @@
 "use client";
 import Header from "@/components/header";
+import { WordRotate } from "@/components/magicui/word-rotate";
+import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
@@ -13,14 +15,22 @@ const Home = () => {
     });
   };
   const handleMouseLeave = () => setMouse({ x: 0, y: 0 });
+
+  const rotatingWords = [
+    "اپلیکیشن ها ",
+    "طراحی وب سایت ها",
+    " برنامه نویسی ها",
+  ];
+
   return (
     <section
+      dir="rtl"
       className="relative lg:min-h-screen bg-gradient-to-br from-gray-50 dark:from-zinc-950 via-indigo-50 dark:via-black to-indigo-50 dark:to-zinc-950 pt-25 pb-20 lg:pt-40 lg:pb-20 overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
       <Header />
-      <div className="hidden lg:block absolute inset-0 pointer-events-none">
+      <div className="hidden lg:block absolute inset-0 pointer-events-none ">
         {/* Light Orb 1 */}
         <motion.div
           className="absolute left-[10%] top-[15%] w-[320px] h-[320px] dark:w-[160px] dark:h-[160px] rounded-full bg-indigo-200 dark:bg-indigo-900 opacity-90 blur-[60px]"
@@ -97,7 +107,7 @@ const Home = () => {
           }}
         />
         <motion.div
-          className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 via-indigo-500/10 to-indigo-600/10"
+          className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 via-indigo-500/10 to-indigo-600/10 pointer-events-none"
           animate={{
             opacity: [0.3, 0.6, 0.3],
             scale: [1, 1.05, 1],
@@ -109,7 +119,7 @@ const Home = () => {
           }}
         />
         <motion.div
-          className="absolute inset-0 bg-gradient-to-tl from-indigo-400/10 via-indigo-500/10 to-indigo-600/10"
+          className="absolute inset-0 bg-gradient-to-tl from-indigo-400/10 via-indigo-500/10 to-indigo-600/10 pointer-events-none"
           animate={{
             opacity: [0.2, 0.5, 0.2],
             x: [0, 20, 0],
@@ -140,19 +150,44 @@ const Home = () => {
       />
 
       <div
-        className="absolute inset-0 opacity-40"
+        className="absolute inset-0 opacity-40 pointer-events-none"
         style={{
           backgroundImage:
             "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.3'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
         }}
       ></div>
       <div className="container mx-auto">
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center gap-3">
           <p className="text-base font-medium">
             آژانس طراحی رابط و تجربه کاربری و وب برای
           </p>
+          <Badge variant={"outline"} className="text-sm font-medium">
+            برنامه نویسی
+          </Badge>
+          <Badge variant={"outline"} className="text-sm font-medium">
+            برنامه نویسی
+          </Badge>
+          <Badge variant={"outline"} className="text-sm font-medium">
+            رابط کاربری
+          </Badge>
         </div>
-        <div></div>
+        <div className="text-center mt-20  mx-auto z-50">
+          {/* Main headline */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className=" flex flex-col md:flex-row items-center gap-0.5 md:gap-1.25 justify-center text-2xl lg:text-5xl font-bold mb-4 lg:mb-8 leading-[1.2]"
+          >
+            <span className="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-900 dark:from-gray-50 dark:via-blue-300 dark:to-indigo-900 bg-clip-text text-transparent">
+              شریک طراحی قابل‌اعتماد شما، با تیمی حرفه‌ای در زمینهٔ
+            </span>
+            <WordRotate
+              words={rotatingWords}
+              className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent w-[365px]"
+            />
+          </motion.p>
+        </div>
       </div>
     </section>
   );
