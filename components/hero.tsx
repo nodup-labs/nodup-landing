@@ -1,19 +1,19 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Play, Gift } from 'lucide-react';
-import HeroVideoDialog from '@/components/ui/hero-video-dialog';
-import { WordRotate } from '@/components/magicui/word-rotate';
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, Play, Gift } from "lucide-react";
+import HeroVideoDialog from "@/components/ui/hero-video-dialog";
+import { WordRotate } from "@/components/magicui/word-rotate";
+import { useTheme } from "next-themes";
+import { useState, useEffect } from "react";
+import Link from "next/link";
 import { AnimatedTooltip } from "@/components/ui/animated-tooltip";
-import { Star } from '@/components/custom/star';
+import { Star } from "@/components/custom/star";
 
 const Hero = () => {
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   useEffect(() => setMounted(true), []);
-  const rotatingWords = ["Web Apps", "Websites",  "Solutions"];
+  const rotatingWords = ["Web Apps", "Websites", "Solutions"];
 
   const people = [
     {
@@ -50,7 +50,7 @@ const Hero = () => {
       designation: "Marketing Head",
       image:
         "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGF2YXRhcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
-    },  
+    },
     {
       id: 5,
       name: "Tyler Durden",
@@ -87,7 +87,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative lg:min-h-screen bg-gradient-to-br from-gray-50 dark:from-zinc-950 via-indigo-50 dark:via-black to-indigo-50 dark:to-zinc-950 pt-25 pb-20 lg:pt-40 lg:pb-20 overflow-hidden group"
+      className="relative lg:min-h-screen bg-gradient-to-br from-gray-50 dark:from-zinc-950 via-indigo-50 dark:via-black to-indigo-50 dark:to-zinc-950 pt-25 pb-20 lg:pt-40 lg:pb-20 overflow-hidden"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
@@ -105,7 +105,7 @@ const Hero = () => {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
         {/* Core hotspot for orb 1 */}
@@ -120,7 +120,7 @@ const Hero = () => {
           transition={{
             duration: 7,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
         {/* Light Orb 2 */}
@@ -135,7 +135,7 @@ const Hero = () => {
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
         {/* Light Orb 3 */}
@@ -150,7 +150,7 @@ const Hero = () => {
           transition={{
             duration: 11,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
         {/* Light Orb 4 */}
@@ -165,10 +165,10 @@ const Hero = () => {
           transition={{
             duration: 13,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
-        <motion.div 
+        <motion.div
           className="absolute inset-0 bg-gradient-to-br from-indigo-400/10 via-indigo-500/10 to-indigo-600/10"
           animate={{
             opacity: [0.3, 0.6, 0.3],
@@ -177,10 +177,10 @@ const Hero = () => {
           transition={{
             duration: 3,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
-        />  
-        <motion.div 
+        />
+        <motion.div
           className="absolute inset-0 bg-gradient-to-tl from-indigo-400/10 via-indigo-500/10 to-indigo-600/10"
           animate={{
             opacity: [0.2, 0.5, 0.2],
@@ -190,35 +190,39 @@ const Hero = () => {
           transition={{
             duration: 5,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut",
           }}
         />
       </div>
 
       {/* Parallax moving elements on hover */}
-      <motion.div 
+      <motion.div
         className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-indigo-400/20 to-indigo-600/20 dark:bg-gradient-to-br dark:from-indigo-600/20 dark:to-indigo-400/20 rounded-full blur-xl"
         whileHover={{ x: 30, y: -20, scale: 1.2 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
       />
-      <motion.div 
+      <motion.div
         className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-indigo-400/20 to-indigo-600/20 dark:bg-gradient-to-br dark:from-indigo-600/20 dark:to-indigo-400/20 rounded-full blur-xl"
         whileHover={{ x: -25, y: 15, scale: 1.1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       />
-      <motion.div 
+      <motion.div
         className="absolute bottom-40 left-20 w-20 h-20 bg-gradient-to-br from-indigo-400/20 to-indigo-600/20 dark:bg-gradient-to-br dark:from-indigo-600/20 dark:to-indigo-400/20 rounded-full blur-xl"
         whileHover={{ x: 20, y: -30, scale: 1.3 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
       />
 
-      <div className="absolute inset-0 opacity-40" style={{
-        backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.3'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")"
-      }}></div>
-      
+      <div
+        className="absolute inset-0 opacity-40"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.3'%3E%3Ccircle cx='7' cy='7' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+        }}
+      ></div>
+
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-5xl mx-auto">
-          {/* Main headline */}          
+          {/* Main headline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -241,8 +245,8 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-base md:text-xl text-muted-foreground mb-6 md:mb-10 max-w-[600px] mx-auto leading-relaxed"
           >
-            Create amazing apps effortlessly with our powerful platform. 
-            From idea to launch in just minutes.
+            Create amazing apps effortlessly with our powerful platform. From
+            idea to launch in just minutes.
           </motion.p>
 
           <motion.div
@@ -251,16 +255,24 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-3 mb-10"
           >
-            <Button size="lg" className="cursor-pointer hover:[&_svg]:translate-x-1 w-46">
+            <Button
+              size="lg"
+              className="cursor-pointer hover:[&_svg]:translate-x-1 w-46"
+            >
               Get started for free
               <ArrowRight className="h-5 w-5 transition-transform" />
             </Button>
 
-            <Button size="lg" variant="outline" className="cursor-pointer hover:[&_svg]:-translate-y-1 w-46" asChild>
-              <Link href="#features"> 
+            <Button
+              size="lg"
+              variant="outline"
+              className="cursor-pointer hover:[&_svg]:-translate-y-1 w-46"
+              asChild
+            >
+              <Link href="#features">
                 <Gift className="h-5 w-5 transition-transform opacity-60" />
                 Explore Metronic
-              </Link>                
+              </Link>
             </Button>
           </motion.div>
 
@@ -274,14 +286,19 @@ const Hero = () => {
             <div className="flex gap-2.5">
               <div className="flex -space-x-2 me-2.5">
                 <AnimatedTooltip items={people} />
-              </div>     
+              </div>
               <div className="flex items-center gap-1">
                 {[...Array(5)].map((_, idx) => (
-                  <Star key={idx} className="h-5 w-5 transition-transform opacity-60 text-yellow-500" />
+                  <Star
+                    key={idx}
+                    className="h-5 w-5 transition-transform opacity-60 text-yellow-500"
+                  />
                 ))}
               </div>
-            </div>   
-            <div className="text-center text-muted-foreground text-sm font-medium">Trusted by thousands of enterprises</div>
+            </div>
+            <div className="text-center text-muted-foreground text-sm font-medium">
+              Trusted by thousands of enterprises
+            </div>
           </motion.div>
 
           {/* Hero Video Dialog */}
@@ -302,7 +319,9 @@ const Hero = () => {
                 }
                 animationStyle="from-center"
                 videoSrc="https://www.youtube.com/embed/VIbMn0QHBlw?si=uV9MFOqt6dmBs0vW"
-                thumbnailSrc={resolvedTheme === 'dark' ? '/screens/2.png' : '/screens/5.png'}
+                thumbnailSrc={
+                  resolvedTheme === "dark" ? "/screens/2.png" : "/screens/5.png"
+                }
                 thumbnailAlt="Product Demo"
               />
             )}
