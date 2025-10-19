@@ -1,13 +1,12 @@
-
-import { motion } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
 
 const TAILWIND_FUCHSIA_CLASSES = [
-  'fill-indigo-300 dark:fill-indigo-600',
-  'fill-indigo-400 dark:fill-indigo-500',
-  'fill-indigo-500 dark:fill-indigo-400',
-  'fill-indigo-600 dark:fill-indigo-300',
-  'fill-indigo-700 dark:fill-indigo-200',
+  "fill-indigo-300 dark:fill-indigo-600",
+  "fill-indigo-400 dark:fill-indigo-500",
+  "fill-indigo-500 dark:fill-indigo-400",
+  "fill-indigo-600 dark:fill-indigo-300",
+  "fill-indigo-700 dark:fill-indigo-200",
 ];
 
 const Logo = () => {
@@ -21,7 +20,8 @@ const Logo = () => {
   }, []);
 
   // Offset each rect's color cycle for a lively effect
-  const getClass = (offset: number) => TAILWIND_FUCHSIA_CLASSES[(step + offset) % TAILWIND_FUCHSIA_CLASSES.length];
+  const getClass = (offset: number) =>
+    TAILWIND_FUCHSIA_CLASSES[(step + offset) % TAILWIND_FUCHSIA_CLASSES.length];
 
   return (
     <motion.div
@@ -29,7 +29,11 @@ const Logo = () => {
       className="flex items-center gap-2 leading-0"
     >
       {/* Logo Text */}
-      <svg className="size-5" viewBox="15 15 20 30" xmlns="http://www.w3.org/2000/svg">
+      <svg
+        className="size-5"
+        viewBox="15 15 20 30"
+        xmlns="http://www.w3.org/2000/svg"
+      >
         <g>
           <rect
             x="15"
@@ -58,12 +62,13 @@ const Logo = () => {
         </g>
       </svg>
 
-      <span className="text-2xl font-bold bg-gradient-to-r from-indigo-700 dark:from-indigo-400 to-indigo-400 dark:to-indigo-300 bg-clip-text text-transparent">
-        SaaS
+      <span className="text-2xl flex gap-2 font-bold bg-gradient-to-r from-indigo-700 dark:from-indigo-400 to-indigo-400 dark:to-indigo-300 bg-clip-text text-transparent">
+        <span className="text-primary">&lt;</span>
+        NODUP
+        <span className="text-primary">&gt;</span>
       </span>
     </motion.div>
   );
 };
 
 export default Logo;
-
