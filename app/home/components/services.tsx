@@ -5,16 +5,16 @@ import Image from "next/image";
 
 const Services = () => {
   return (
-    <div className="px-4 md:px-16">
-      <div className="flex flex-col items-center gap-6 md:gap-13 pb-16 text-center md:text-left">
+    <div className="px-4 md:px-16 pb-10">
+      <div className="flex flex-col items-center gap-6 md:gap-13 pb-16  md:text-left">
         <Badge variant="outline" className="text-sm font-medium">
           خدمات ما
         </Badge>
-        <p className="text-2xl md:text-4xl font-bold max-w-3xl">
+        <p className="text-2xl md:text-4xl font-bold max-w-3xl text-center leading-16 ">
           حرفه‌ای‌تر برای سایت آژانس: «با نوآوری‌های دیجیتال ما، کسب‌وکارتان را
-          متحول کنید
+          متحول کنید»
         </p>
-        <p className="text-base md:text-xl font-normal text-neutral-300 max-w-2xl">
+        <p className="text-base md:text-xl font-normal text-neutral-300  text-center max-w-2xl leading-10">
           در Pixen، با تکیه بر طراحی‌های جسورانه و تمرکز بر تجربه‌ی کاربر، به
           رشد و ارتقای برند دیجیتال شما کمک می‌کنیم
         </p>

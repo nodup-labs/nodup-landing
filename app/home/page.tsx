@@ -7,6 +7,7 @@ import BackgroundImage from "./components/backgroundImage";
 import Parallax from "./components/Parallax";
 import Services from "./components/services";
 import TrustedBrands1 from "./components/TrustedBrands1";
+import AboutUsSection from "./components/aboutus-section";
 
 export default function Home() {
   const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
@@ -51,6 +52,9 @@ export default function Home() {
 
         {/* Our Services */}
         <Services />
+
+        {/* about us */}
+        <AboutUsSection />
       </div>
     </AnimatedBackground>
   );

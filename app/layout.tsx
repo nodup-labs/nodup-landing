@@ -25,9 +25,9 @@ export default async function RootLayout({
   return (
     <html className="h-full" suppressHydrationWarning>
       <body
+        dir="rtl"
         className={cn(
           "antialiased text-base text-foreground bg-background",
-
           peyda.variable
         )}
       >
