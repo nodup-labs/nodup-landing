@@ -2,10 +2,11 @@
 import Header from "@/components/header";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { Badge } from "@/components/ui/badge";
-import TrustedBrands1 from "./components/TrustedBrands1";
-import Parallax from "./components/Parallax";
 import AnimatedBackground from "./components/AnimatedBackground";
 import BackgroundImage from "./components/backgroundImage";
+import Parallax from "./components/Parallax";
+import Services from "./components/services";
+import TrustedBrands1 from "./components/TrustedBrands1";
 
 export default function Home() {
   const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
@@ -30,7 +31,7 @@ export default function Home() {
           </Badge>
         </div>
 
-        <div className="text-center mt-12 md:mt-20 mx-auto relative z-50 px-4">
+        <div className="text-center mt-12 md:mt-20 mx-auto relative z-30 px-4">
           <p className="flex flex-col md:flex-row items-center gap-1 justify-center text-xl md:text-2xl lg:text-5xl font-bold mb-8 leading-[1.2]">
             <span className="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-900 dark:from-gray-50 dark:via-blue-300 dark:to-indigo-900 bg-clip-text text-transparent">
               شریک طراحی قابل‌اعتماد شما، با تیمی حرفه‌ای در زمینهٔ
@@ -47,6 +48,9 @@ export default function Home() {
         </div>
 
         <TrustedBrands1 />
+
+        {/* Our Services */}
+        <Services />
       </div>
     </AnimatedBackground>
   );

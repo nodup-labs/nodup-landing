@@ -46,7 +46,7 @@ const TrustedBrands1 = () => {
   ];
 
   return (
-    <section className="pt-10 md:pt-15 pb-15   overflow-hidden ">
+    <section className="pt-10 md:pt-15 pb-28   overflow-hidden ">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
