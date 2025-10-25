@@ -1,7 +1,9 @@
+import HeaderAboutUs from "./components/headeraboutus";
+
 const AboutUs = () => {
   return (
-    <div>
-      <h1>About Us</h1>
+    <div className="container mx-auto">
+      <HeaderAboutUs />
     </div>
   );
 };
