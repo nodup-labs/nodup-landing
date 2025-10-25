@@ -1,14 +1,11 @@
-import { ReactNode } from "react";
-import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
+import { ReactNode } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
-
-import "@/styles/globals.css";
 import { peyda } from "@/lib/font";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: {
