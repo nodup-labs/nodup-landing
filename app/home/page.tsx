@@ -2,12 +2,13 @@
 import Header from "@/components/header";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { Badge } from "@/components/ui/badge";
+import AboutUsSection from "./components/aboutus-section";
 import AnimatedBackground from "./components/AnimatedBackground";
 import BackgroundImage from "./components/backgroundImage";
 import Parallax from "./components/Parallax";
+import Pricing1 from "./components/Pricing1";
 import Services from "./components/services";
 import TrustedBrands1 from "./components/TrustedBrands1";
-import AboutUsSection from "./components/aboutus-section";
 import WhyChooseUs from "./components/whychoseus";
 
 export default function Home() {
@@ -59,6 +60,9 @@ export default function Home() {
 
         {/* whay choose us */}
         <WhyChooseUs />
+
+        {/* pricing */}
+        <Pricing1 />
       </div>
     </AnimatedBackground>
   );

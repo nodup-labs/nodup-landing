@@ -1,10 +1,7 @@
-import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { CustomBadge } from "@/components/custom/badge";
-import { CustomTitle } from "@/components/custom/title";
-import { CustomSubtitle } from "@/components/custom/subtitle";
-import { Zap, Shield, BarChart3, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { BarChart3, Shield, Users, Zap } from "lucide-react";
 
 const Features1 = () => {
   const features = [
