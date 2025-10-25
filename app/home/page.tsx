@@ -5,6 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import AboutUsSection from "./components/aboutus-section";
 import AnimatedBackground from "./components/AnimatedBackground";
 import BackgroundImage from "./components/backgroundImage";
+import Contact1 from "./components/Contact1";
+import FAQ1 from "./components/FAQ1";
+import Footer1 from "./components/footer1";
 import Parallax from "./components/Parallax";
 import Pricing1 from "./components/Pricing1";
 import Services from "./components/services";
@@ -61,8 +64,17 @@ export default function Home() {
         {/* whay choose us */}
         <WhyChooseUs />
 
+        {/* faq */}
+        <FAQ1 />
+
         {/* pricing */}
         <Pricing1 />
+
+        {/* contact */}
+        <Contact1 />
+
+        {/* footer */}
+        <Footer1 />
       </div>
     </AnimatedBackground>
   );
