@@ -1,16 +1,15 @@
-import { motion } from "framer-motion";
+import { CustomSubtitle } from "@/components/custom/subtitle";
+import { CustomTitle } from "@/components/custom/title";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { CustomBadge } from "@/components/custom/badge";
-import { CustomTitle } from "@/components/custom/title";
-import { CustomSubtitle } from "@/components/custom/subtitle";
+import { motion } from "framer-motion";
 
-import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
+import Link from "next/link";
 
 const FAQ1 = () => {
   const faqs = [
