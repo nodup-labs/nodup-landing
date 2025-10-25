@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "framer-motion";
 import { Github, X, Linkedin, Mail } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
@@ -18,7 +19,7 @@ const Footer1 = () => {
   ];
 
   return (
-    <footer className="bg-gray-700/30 relative overflow-hidden rounded-lg">
+    <footer className="bg-gray-700/30 relative overflow-hidden rounded-lg container mx-auto">
       <div className="container px-6 mx-auto pt-14 pb-6 border-b border-border/50">
         <div className="flex flex-col lg:flex-row justify-between items-start">
           {/* Logo and description - Left side */}

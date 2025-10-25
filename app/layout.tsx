@@ -6,6 +6,9 @@ import { ReactNode } from "react";
 
 import { peyda } from "@/lib/font";
 import "@/styles/globals.css";
+import Header from "@/components/header";
+import Footer1 from "./(app)/components/footer1";
+import AnimatedBackground from "./(app)/components/AnimatedBackground";
 
 export const metadata: Metadata = {
   title: {
@@ -28,16 +31,21 @@ export default async function RootLayout({
           peyda.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          storageKey="saas-theme"
-          enableSystem
-          disableTransitionOnChange
-          enableColorScheme
-        >
-          <TooltipProvider>{children}</TooltipProvider>
-        </ThemeProvider>
+        <AnimatedBackground>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            storageKey="saas-theme"
+            enableSystem
+            disableTransitionOnChange
+            enableColorScheme
+          >
+            <Header />
+
+            <TooltipProvider>{children}</TooltipProvider>
+            <Footer1 />
+          </ThemeProvider>
+        </AnimatedBackground>
       </body>
     </html>
   );
