@@ -1,5 +1,6 @@
 import HeaderAboutUs from "./components/headeraboutus";
 import HowNodupWork from "./components/hownodupwork";
+import OurMission from "./components/ourmission";
 import OurValue from "./components/OurValue";
 
 const AboutUs = () => {
@@ -10,6 +11,8 @@ const AboutUs = () => {
       <HowNodupWork />
       {/* Our Value */}
       <OurValue />
+      {/* Our Mission */}
+      <OurMission />
     </div>
   );
 };

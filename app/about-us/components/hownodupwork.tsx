@@ -1,6 +1,7 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import CardItem from "./CardItem";
+import { motion } from "framer-motion";
 
 const HowNodupWork = () => {
   const cards = [
@@ -38,35 +39,43 @@ const HowNodupWork = () => {
   ];
   return (
     <div>
-      <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
-        <Badge variant="outline" className="text-sm font-medium">
-          نوداپ چجوری کار می‌کنه؟
-        </Badge>
-        <p className="text-2xl md:text-4xl font-bold  text-center leading-16 ">
-          فرآیند
-          <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-            نوداپ
-          </span>
-          تبدیل ایده‌های جسورانه به واقعیت‌های تأثیرگذار
-        </p>
-        <p className="text-base md:text-xl font-normal text-neutral-300  text-center  leading-10">
-          نوداپ با قدرت هوش مصنوعی، روند ساخت پرزنتیشن را متحول می‌کند — سریع‌تر
-          بساز، هوشمندتر کار کن، و در زمان کمتر نتیجه‌ی بیشتر بگیر.
-        </p>
-      </div>
-      <div className="pb-14">
-        <div className="grid grid-cols-1 md:grid-cols-8 gap-5">
-          {cards.map((card, index) => (
-            <CardItem
-              key={index}
-              title={card.title}
-              icon={card.icon}
-              description={card.description}
-              colClass={card.colClass}
-            />
-          ))}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="flex items-center justify-center flex-col text-center gap-5 mb-25"
+      >
+        <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
+          <Badge variant="outline" className="text-sm font-medium">
+            نوداپ چجوری کار می‌کنه؟
+          </Badge>
+          <p className="text-2xl md:text-4xl font-bold  text-center leading-16 ">
+            فرآیند
+            <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+              نوداپ
+            </span>
+            تبدیل ایده‌های جسورانه به واقعیت‌های تأثیرگذار
+          </p>
+          <p className="text-base md:text-xl font-normal text-neutral-300  text-center  leading-10">
+            نوداپ با قدرت هوش مصنوعی، روند ساخت پرزنتیشن را متحول می‌کند —
+            سریع‌تر بساز، هوشمندتر کار کن، و در زمان کمتر نتیجه‌ی بیشتر بگیر.
+          </p>
         </div>
-      </div>
+        <div className="pb-14">
+          <div className="grid grid-cols-1 md:grid-cols-8 gap-5">
+            {cards.map((card, index) => (
+              <CardItem
+                key={index}
+                title={card.title}
+                icon={card.icon}
+                description={card.description}
+                colClass={card.colClass}
+              />
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 };
