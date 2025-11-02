@@ -1,7 +1,41 @@
+"use client";
 import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
+import CardItem from "./CardItem";
 
 const HowNodupWork = () => {
+  const cards = [
+    {
+      title: "پیاده‌سازی",
+      icon: "/icon/Implementationicon.svg",
+      description:
+        "پیاده‌سازی جایی‌ست که چشم‌انداز به واقعیت تبدیل می‌شود جایی که ایده‌ها و استراتژی‌ها از طریق هماهنگی دقیق و اجرای هدفمند به نتایج قابل اندازه‌گیری بدل می‌شوند.",
+      colClass: "col-span-2 row-span-3 md:col-span-2 md:row-span-3",
+    },
+    {
+      title: "طراحی",
+      icon: "/icon/Design.svg",
+      description:
+        "طراحی یعنی تبدیل ایده‌ها به تجربه‌هایی جذاب و کاربردی، جایی که خلاقیت و دقت با هم تلفیق شده و هم زیبایی و هم عملکرد را به کاربران ارائه می‌کند.",
+      colClass:
+        "col-span-2 row-span-3 md:col-start-3 md:col-span-2 md:row-span-3",
+    },
+    {
+      title: "کشف کنید",
+      icon: "/icon/Discover.svg",
+      description:
+        "مرحله‌ی کشف جایی است که ایده‌ها، فرصت‌ها و بینش‌های تازه نمایان می‌شوند؛ جایی برای کاوش امکانات و جمع‌آوری دانش برای خلق راه‌حل‌های نوآورانه",
+      colClass:
+        "col-span-2 row-span-3 md:col-start-5 md:col-span-2 md:row-span-3",
+    },
+    {
+      title: "شروع پروژه",
+      icon: "/icon/Project Kickoff.svg",
+      description:
+        "شروع پروژه، جایی است که اهداف روشن می‌شوند، محدوده کار تعیین می‌گردد، زمان‌بندی‌ها تنظیم می‌شوند و تیم با هماهنگی کامل آماده اجرای بی‌نقص پروژه می‌شود.",
+      colClass:
+        "col-span-2 row-span-3 md:col-start-7 md:col-span-2 md:row-span-3",
+    },
+  ];
   return (
     <div>
       <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
@@ -21,99 +55,16 @@ const HowNodupWork = () => {
         </p>
       </div>
       <div className="pb-14">
-        <div className="grid grid-cols-8 grid-rows-3 gap-5">
-          <div className="col-span-2 row-span-3 bg-gray-700/30 border rounded-lg p-3 relative flex flex-col gap-7">
-            <div className="bg-gray-400/30 rounded-lg p-3 w-11 h-11 flex items-center justify-center">
-              <Image
-                src={"/icon/Implementationicon.svg"}
-                alt="icon"
-                width={24}
-                height={24}
-              />
-            </div>
-            <Image
-              src={"/screens/Graphics.svg"}
-              alt="server background"
-              width={330}
-              height={330}
-              className="transform scale-x-[-1] absolute left-0 top-0"
+        <div className="grid grid-cols-1 md:grid-cols-8 gap-5">
+          {cards.map((card, index) => (
+            <CardItem
+              key={index}
+              title={card.title}
+              icon={card.icon}
+              description={card.description}
+              colClass={card.colClass}
             />
-            <p className="font-medium text-xl">پیاده‌سازی</p>
-            <p className="text-sm font-normal">
-              پیاده‌سازی جایی‌ست که چشم‌انداز به واقعیت تبدیل می‌شود جایی که
-              ایده‌ها و استراتژی‌ها از طریق هماهنگی دقیق و اجرای هدفمند به نتایج
-              قابل اندازه‌گیری بدل می‌شوند.
-            </p>
-          </div>
-          <div className="col-span-2 row-span-3 col-start-3 bg-gray-700/30 border rounded-lg p-3 relative flex flex-col gap-7">
-            <div className="bg-gray-400/30 rounded-lg p-3 w-11 h-11 flex items-center justify-center">
-              <Image
-                src={"/icon/Design.svg"}
-                alt="icon"
-                width={24}
-                height={24}
-              />
-            </div>
-            <Image
-              src={"/screens/Graphics.svg"}
-              alt="server background"
-              width={330}
-              height={330}
-              className="transform scale-x-[-1] absolute left-0 top-0"
-            />
-            <p className="font-medium text-xl">طراحی</p>
-            <p className="text-sm font-normal">
-              طراحی یعنی تبدیل ایده‌ها به تجربه‌هایی جذاب و کاربردی، جایی که
-              خلاقیت و دقت با هم تلفیق شده و هم زیبایی و هم عملکرد را به کاربران
-              ارائه می‌کند.
-            </p>
-          </div>
-          <div className="col-span-2 row-span-3 col-start-5 bg-gray-700/30 border rounded-lg p-3 relative flex flex-col gap-7">
-            <div className="bg-gray-400/30 rounded-lg p-3 w-11 h-11 flex items-center justify-center">
-              <Image
-                src={"/icon/Discover.svg"}
-                alt="icon"
-                width={24}
-                height={24}
-              />
-            </div>
-            <Image
-              src={"/screens/Graphics.svg"}
-              alt="server background"
-              width={330}
-              height={330}
-              className="transform scale-x-[-1] absolute left-0 top-0"
-            />
-            <p className="font-medium text-xl">کشف کنید</p>
-            <p className="text-sm font-normal">
-              مرحله‌ی کشف جایی است که ایده‌ها، فرصت‌ها و بینش‌های تازه نمایان
-              می‌شوند؛ جایی برای کاوش امکانات و جمع‌آوری دانش برای خلق
-              راه‌حل‌های نوآورانه
-            </p>
-          </div>
-          <div className="col-span-2 row-span-3 col-start-7 bg-gray-700/30 border rounded-lg p-3 relative flex flex-col gap-7">
-            <div className="bg-gray-400/30 rounded-lg p-3 w-11 h-11 flex items-center justify-center">
-              <Image
-                src={"/icon/Project Kickoff.svg"}
-                alt="icon"
-                width={24}
-                height={24}
-              />
-            </div>
-            <Image
-              src={"/screens/Graphics.svg"}
-              alt="server background"
-              width={330}
-              height={330}
-              className="transform scale-x-[-1] absolute left-0 top-0"
-            />
-            <p className="font-medium text-xl">شروع پروژه</p>
-            <p className="text-sm font-normal">
-              شروع پروژه، جایی است که اهداف روشن می‌شوند، محدوده کار تعیین
-              می‌گردد، زمان‌بندی‌ها تنظیم می‌شوند و تیم با هماهنگی کامل آماده
-              اجرای بی‌نقص پروژه می‌شود.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </div>
