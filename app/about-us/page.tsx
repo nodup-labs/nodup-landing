@@ -1,5 +1,6 @@
 import HeaderAboutUs from "./components/headeraboutus";
 import HowNodupWork from "./components/hownodupwork";
+import OurValue from "./components/OurValue";
 
 const AboutUs = () => {
   return (
@@ -7,6 +8,8 @@ const AboutUs = () => {
       <HeaderAboutUs />
       {/* How NOdup Work */}
       <HowNodupWork />
+      {/* Our Value */}
+      <OurValue />
     </div>
   );
 };
