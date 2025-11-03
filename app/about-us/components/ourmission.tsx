@@ -28,10 +28,11 @@ const OurMission = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="mb-25"
+        className="mb-24"
       >
-        <div className="flex justify-between">
-          <div className="w-4/12 flex flex-col gap-4">
+        {/* Mobile-first: stack content, switch to two-column on md+ */}
+        <div className="flex flex-col md:flex-row items-start gap-6">
+          <div className="w-full md:w-4/12 flex flex-col gap-4">
             {cards.map((card, index) => (
               <CardItem
                 key={index}
@@ -42,8 +43,8 @@ const OurMission = () => {
               />
             ))}
           </div>
-          <div className="w-1/2">
-            <div className="flex flex-col gap-6 md:gap-2 pb-16 ">
+          <div className="w-full md:w-8/12">
+            <div className="flex flex-col gap-6 md:gap-2 pb-6 md:pb-16">
               <Badge variant="outline" className="text-sm font-medium">
                 ماموریت ما
               </Badge>
