@@ -17,7 +17,7 @@ function TeamCard({ name, role, image, linkedin, placeholder }: any) {
 
   return (
     <div
-      className="relative rounded-lg overflow-hidden aspect-[3/4] cursor-pointer"
+      className="relative rounded-lg overflow-hidden cursor-pointer aspect-[3/4] md:aspect-[3/4] max-h-[300px] md:max-h-full"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -25,12 +25,11 @@ function TeamCard({ name, role, image, linkedin, placeholder }: any) {
         src={image}
         alt={name}
         fill
-        sizes="(max-width: 768px) 100vw, 33vw"
+        sizes="(max-width: 768px) 90vw, 33vw"
         className="object-cover object-center"
         priority
       />
 
-      {/* نوار پایین با افکت Framer Motion */}
       <motion.div
         initial={{ y: "100%" }}
         animate={{ y: hovered ? "0%" : "100%" }}

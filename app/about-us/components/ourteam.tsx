@@ -56,7 +56,7 @@ const OurTeam = () => {
             </p>
           </div>
           <div>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {teamMembers.map((member, index) => (
                 <TeamCard key={index} {...member} />
               ))}
