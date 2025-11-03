@@ -3,7 +3,13 @@ import Image from "next/image";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-function TeamCard({ name, role, image, linkedin, placeholder }: any) {
+function TeamCard({ name, role, image, linkedin, placeholder }: {
+  name: string;
+  role: string;
+  image: string;
+  linkedin: string;
+  placeholder?: boolean;
+}) {
   const [hovered, setHovered] = useState(false);
 
   if (placeholder) {
