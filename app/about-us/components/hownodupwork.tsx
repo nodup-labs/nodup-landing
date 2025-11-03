@@ -44,7 +44,7 @@ const HowNodupWork = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="flex items-center justify-center flex-col text-center gap-5 mb-25"
+        className=" mb-25"
       >
         <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
           <Badge variant="outline" className="text-sm font-medium">
