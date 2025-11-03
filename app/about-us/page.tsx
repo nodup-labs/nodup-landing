@@ -1,3 +1,5 @@
+"use client";
+import FAQ1 from "../(app)/components/FAQ1";
 import HeaderAboutUs from "./components/headeraboutus";
 import HowNodupWork from "./components/hownodupwork";
 import OurMission from "./components/ourmission";
@@ -16,6 +18,8 @@ const AboutUs = () => {
       <OurMission />
       {/* Our Team */}
       <OurTeam />
+      {/* FAQ */}
+      <FAQ1 />
     </div>
   );
 };

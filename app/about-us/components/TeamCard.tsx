@@ -7,7 +7,6 @@ function TeamCard({ name, role, image, linkedin, placeholder }: any) {
   const [hovered, setHovered] = useState(false);
 
   if (placeholder) {
-    // کارت خالی ساده بدون hover
     return (
       <div className="relative rounded-lg overflow-hidden aspect-[3/4] bg-gray-700/30 flex items-center justify-center text-gray-500">
         به‌زودی...
