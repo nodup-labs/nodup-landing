@@ -1,6 +1,6 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, type PanInfo } from "framer-motion";
 import CardProjects from "./cardprojects";
 import { Badge } from "@/components/ui/badge";
 
@@ -116,7 +116,10 @@ export default function ProjectSlider() {
     return () => container.removeEventListener("wheel", handleWheel);
   }, [activeIndex]);
 
-  const handleDragEnd = (_: any, info: any) => {
+  const handleDragEnd = (
+    _event: PointerEvent | MouseEvent | TouchEvent,
+    info: PanInfo
+  ) => {
     const offset = info.offset.y;
     if (!canScroll.current) return;
     if (Math.abs(offset) < 30) return;

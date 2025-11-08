@@ -1,8 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
-import { Github, X, Linkedin, Mail } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 import Logo from "@/components/logo";
+import { Separator } from "@/components/ui/separator";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer1 = () => {
   const links = {

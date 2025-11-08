@@ -5,13 +5,11 @@ import AboutUsSection from "./components/aboutus-section";
 import BackgroundImage from "./components/backgroundImage";
 import Contact1 from "./components/Contact1";
 import FAQ1 from "./components/FAQ1";
+import MemberInfo from "./components/memberinfo";
 import Parallax from "./components/Parallax";
-import Pricing1 from "./components/Pricing1";
-import Services from "./components/services";
+import ProjectSlider from "./components/projectSlider";
 import TrustedBrands1 from "./components/TrustedBrands1";
 import WhyChooseUs from "./components/whychoseus";
-import MemberInfo from "./components/memberinfo";
-import ProjectSlider from "./components/projectSlider";
 
 export default function Home() {
   const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
