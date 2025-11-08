@@ -60,17 +60,18 @@ const Contact1 = () => {
     {
       icon: Mail,
       title: "ایمیل",
-      content: "hello@kt.com",
+      content: "hello.nodup@gmail.com",
     },
     {
       icon: Phone,
       title: "تلفن",
-      content: "+1 (555) 123-4567",
+      content: "۰۹۹۰۰۳۰۰۰۲۹",
     },
     {
       icon: MapPin,
       title: "آدرس",
-      content: "تهران چهاراه ",
+      content:
+        " خیابان جمهوری خیابان رازی کوچه شهبازیان (شیرزاد سابق ) پلاک ۲۲ واحد ۲‌ ",
     },
   ];
 
@@ -185,7 +186,7 @@ const Contact1 = () => {
                             <FormLabel>ایمیل</FormLabel>
                             <FormControl>
                               <Input
-                                placeholder="your@email.com"
+                                placeholder="hello.nodup@gmail.com"
                                 type="email"
                                 {...field}
                               />

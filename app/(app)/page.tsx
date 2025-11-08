@@ -10,6 +10,8 @@ import Pricing1 from "./components/Pricing1";
 import Services from "./components/services";
 import TrustedBrands1 from "./components/TrustedBrands1";
 import WhyChooseUs from "./components/whychoseus";
+import MemberInfo from "./components/memberinfo";
+import ProjectSlider from "./components/projectSlider";
 
 export default function Home() {
   const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
@@ -52,7 +54,7 @@ export default function Home() {
         <TrustedBrands1 />
 
         {/* Our Services */}
-        <Services />
+        {/* <Services /> */}
 
         {/* about us */}
         <AboutUsSection />
@@ -60,11 +62,17 @@ export default function Home() {
         {/* whay choose us */}
         <WhyChooseUs />
 
-        {/* faq */}
-        <FAQ1 />
+        {/* Project Slider */}
+        <ProjectSlider />
 
         {/* pricing */}
-        <Pricing1 />
+        {/* <Pricing1 /> */}
+
+        {/* member info */}
+        <MemberInfo />
+
+        {/* faq */}
+        <FAQ1 />
 
         {/* contact */}
         <Contact1 />
