@@ -62,11 +62,11 @@ const AboutUsSection = () => {
                 <ArrowRight className="h-5 w-5 transition-transform" />
               </Button>
             </div>
-            <div className="w-full lg:w-1/2 bg-gray-500/30 backdrop-blur-md border border-gray-500/40 p-2 flex flex-col gap-5 rounded-lg">
+            <div className="w-full lg:w-1/2 bg-gray-600/30 backdrop-blur-md border border-gray-600/40 p-2 flex flex-col gap-5 rounded-lg">
               {[1, 2, 3, 4].map((i) => (
                 <div
                   key={i}
-                  className="p-2 bg-gray-400/30 backdrop-blur-md border border-gray-400/40 rounded-lg flex gap-2 items-center justify-between"
+                  className="p-2 bg-gray-700/30 backdrop-blur-md border border-gray-700/40 rounded-lg flex gap-2 items-center justify-between"
                 >
                   <p className="text-lg font-medium">شروع کار پروژه</p>
                   <div className="p-2 bg-gradient-to-r from-purple-900 to-gray-700 rounded-lg">

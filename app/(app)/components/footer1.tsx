@@ -1,8 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
-import { Github, X, Linkedin, Mail } from "lucide-react";
-import { Separator } from "@/components/ui/separator";
 import Logo from "@/components/logo";
+import { Separator } from "@/components/ui/separator";
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer1 = () => {
   const links = {
@@ -12,10 +12,13 @@ const Footer1 = () => {
   };
 
   const socialLinks = [
-    { icon: X, href: "#", label: "X (Twitter)" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Mail, href: "#", label: "Email" },
+    { icon: Github, href: "https://github.com/nodup-labs", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/in/nodup",
+      label: "LinkedIn",
+    },
+    { icon: Mail, href: "hello.nodup@gmail.com", label: "Email" },
   ];
 
   return (
