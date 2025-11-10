@@ -12,8 +12,8 @@ import AnimatedBackground from "./(app)/components/AnimatedBackground";
 
 export const metadata: Metadata = {
   title: {
-    template: "%s | Metronic SaaS",
-    default: "Metronic SaaS",
+    template: "nodup",
+    default: "nodup",
   },
 };
 

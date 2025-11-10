@@ -61,7 +61,7 @@ const FAQ1 = () => {
           className="flex items-center justify-center flex-col text-center gap-5 mb-25"
         >
           <Badge variant="outline" className="text-sm font-medium">
-            FAQ
+            سؤالات متداول
           </Badge>
 
           <CustomTitle>سوالات متداول</CustomTitle>

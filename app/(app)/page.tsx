@@ -7,8 +7,7 @@ import Contact1 from "./components/Contact1";
 import FAQ1 from "./components/FAQ1";
 import MemberInfo from "./components/memberinfo";
 import Parallax from "./components/Parallax";
-import ProjectSlider from "./components/projectSlider";
-import TrustedBrands1 from "./components/TrustedBrands1";
+import ProjectGrid from "./components/projectGrid";
 import WhyChooseUs from "./components/whychoseus";
 
 export default function Home() {
@@ -49,7 +48,8 @@ export default function Home() {
           </p>
         </div>
 
-        <TrustedBrands1 />
+        {/* <TrustedBrands1 /> */}
+        {/* <TrustedBrands1 /> */}
 
         {/* Our Services */}
         {/* <Services /> */}
@@ -60,8 +60,8 @@ export default function Home() {
         {/* whay choose us */}
         <WhyChooseUs />
 
-        {/* Project Slider */}
-        <ProjectSlider />
+        {/* Project Grid */}
+        <ProjectGrid />
 
         {/* pricing */}
         {/* <Pricing1 /> */}
