@@ -10,6 +10,7 @@ import Parallax from "./components/Parallax";
 import ProjectSlider from "./components/projectSlider";
 import TrustedBrands1 from "./components/TrustedBrands1";
 import WhyChooseUs from "./components/whychoseus";
+import ProjectGrid from "./components/projectGrid";
 
 export default function Home() {
   const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
@@ -60,8 +61,8 @@ export default function Home() {
         {/* whay choose us */}
         <WhyChooseUs />
 
-        {/* Project Slider */}
-        <ProjectSlider />
+        {/* Project Grid */}
+        <ProjectGrid />
 
         {/* pricing */}
         {/* <Pricing1 /> */}

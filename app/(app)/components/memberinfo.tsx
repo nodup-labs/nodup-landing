@@ -55,69 +55,76 @@ const MemberInfo = () => {
             می‌سازد.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-8 py-10">
-          {teamMembers.map((member) => {
-            const isHovered = hoveredId === member.id;
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <div className="flex flex-wrap justify-center gap-8 py-10">
+            {teamMembers.map((member) => {
+              const isHovered = hoveredId === member.id;
 
-            return (
-              <motion.div
-                key={member.id}
-                onMouseEnter={() => setHoveredId(member.id)}
-                onMouseLeave={() => setHoveredId(null)}
-                className="relative overflow-hidden rounded-xl cursor-pointer"
-                animate={{
-                  scale: isHovered ? 1.08 : 1,
-                  filter:
-                    hoveredId && !isHovered
-                      ? "grayscale(100%) brightness(60%)"
-                      : "grayscale(0%) brightness(100%)",
-                }}
-                transition={{ type: "spring", stiffness: 250, damping: 18 }}
-              >
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={300}
-                  height={300}
-                  className="object-cover w-[300px] h-[300px]"
-                />
-
+              return (
                 <motion.div
-                  initial={{ opacity: 0, y: 60 }}
+                  key={member.id}
+                  onMouseEnter={() => setHoveredId(member.id)}
+                  onMouseLeave={() => setHoveredId(null)}
+                  className="relative overflow-hidden rounded-xl cursor-pointer"
                   animate={{
-                    opacity: isHovered ? 1 : 0,
-                    y: isHovered ? 0 : 60,
+                    scale: isHovered ? 1.08 : 1,
+                    filter:
+                      hoveredId && !isHovered
+                        ? "grayscale(100%) brightness(60%)"
+                        : "grayscale(0%) brightness(100%)",
                   }}
-                  transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
-                  className="absolute bottom-0 left-0 w-full bg-black/70 py-3 px-4 text-right"
+                  transition={{ type: "spring", stiffness: 250, damping: 18 }}
                 >
-                  <motion.p
-                    initial={{ y: 10, opacity: 0 }}
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={300}
+                    height={300}
+                    className="object-cover w-[300px] h-[300px]"
+                  />
+
+                  <motion.div
+                    initial={{ opacity: 0, y: 60 }}
                     animate={{
-                      y: isHovered ? 0 : 10,
                       opacity: isHovered ? 1 : 0,
+                      y: isHovered ? 0 : 60,
                     }}
-                    transition={{ duration: 0.3, delay: isHovered ? 0.1 : 0 }}
-                    className="text-white text-base font-semibold"
+                    transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
+                    className="absolute bottom-0 left-0 w-full bg-black/70 py-3 px-4 text-right"
                   >
-                    {member.name}
-                  </motion.p>
-                  <motion.p
-                    initial={{ y: 10, opacity: 0 }}
-                    animate={{
-                      y: isHovered ? 0 : 10,
-                      opacity: isHovered ? 1 : 0,
-                    }}
-                    transition={{ duration: 0.3, delay: isHovered ? 0.2 : 0 }}
-                    className="text-gray-300 text-sm"
-                  >
-                    {member.role}
-                  </motion.p>
+                    <motion.p
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{
+                        y: isHovered ? 0 : 10,
+                        opacity: isHovered ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.3, delay: isHovered ? 0.1 : 0 }}
+                      className="text-white text-base font-semibold"
+                    >
+                      {member.name}
+                    </motion.p>
+                    <motion.p
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{
+                        y: isHovered ? 0 : 10,
+                        opacity: isHovered ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.3, delay: isHovered ? 0.2 : 0 }}
+                      className="text-gray-300 text-sm"
+                    >
+                      {member.role}
+                    </motion.p>
+                  </motion.div>
                 </motion.div>
-              </motion.div>
-            );
-          })}
-        </div>
+              );
+            })}
+          </div>
+        </motion.div>
       </div>
     </motion.div>
   );
