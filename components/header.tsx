@@ -16,7 +16,15 @@ import { Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
-  const navItems = ["خانه", "درباره ما", "تعرفه‌ها", "خدمات", "تماس با ما"];
+  const navItems = [
+    "خانه",
+    "بیشتر با ما آشنا شوید",
+    " چرا نوداپ",
+    "پروژه‌های ما",
+    "تیم ما",
+    "سؤالات متداول",
+    "با ما در ارتباط باشید",
+  ];
 
   const { resolvedTheme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -40,8 +48,10 @@ const Header = () => {
 
       // Track active section based on scroll position
       const sections = [
+        "about",
         "features",
-        "how-it-works",
+        "projects",
+        "team",
         "pricing",
         "faq",
         "contact",
@@ -69,14 +79,27 @@ const Header = () => {
 
   const handleNavClick = (item: string) => {
     setIsOpen(false);
-    if (item === "Home") {
+    const normalized = item.trim();
+
+    if (normalized === "خانه") {
       // Scroll to top of page for Home link
       window.scrollTo({
         top: 0,
         behavior: "smooth",
       });
     } else {
-      const targetId = item.toLowerCase().replace(" ", "-");
+      // map Persian nav labels to section ids
+      const map: { [key: string]: string } = {
+        "بیشتر با ما آشنا شوید": "about",
+        "چرا نوداپ": "features",
+        "پروژه‌های ما": "projects",
+        "تیم ما": "team",
+        "سؤالات متداول": "faq",
+        "با ما در ارتباط باشید": "contact",
+      };
+
+      const targetId =
+        map[normalized] || normalized.toLowerCase().replace(/\s+/g, "-");
       const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({
@@ -88,14 +111,23 @@ const Header = () => {
   };
 
   const isActiveItem = (item: string) => {
-    const sectionMap: { [key: string]: string } = {
-      Home: "home",
-      Features: "features",
-      Pricing: "pricing",
-      FAQ: "faq",
-      Contact: "contact",
+    const map: { [key: string]: string } = {
+      خانه: "home",
+      "بیشتر با ما آشنا شوید": "about",
+      "چرا نوداپ": "features",
+      "پروژه‌های ما": "projects",
+      "تیم ما": "team",
+      "سؤالات متداول": "faq",
+      "با ما در ارتباط باشید": "contact",
     };
-    return activeSection === sectionMap[item];
+
+    const normalized = item.trim();
+    const target =
+      map[normalized] || normalized.toLowerCase().replace(/\s+/g, "-");
+    return (
+      activeSection === target ||
+      (target === "home" && activeSection === "home")
+    );
   };
 
   return (

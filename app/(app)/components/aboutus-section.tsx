@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const AboutUsSection = () => {
   return (
-    <div>
+    <section id="about">
       <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
         <Badge variant="outline" className="text-sm font-medium">
           بیشتر با ما آشنا شوید
@@ -83,7 +83,7 @@ const AboutUsSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

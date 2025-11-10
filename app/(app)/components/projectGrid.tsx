@@ -131,7 +131,7 @@ const ProjectGrid = () => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <div className="mb-20 relative container mx-auto">
+      <div id="projects" className="mb-20 relative container mx-auto">
         <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
           <Badge variant="outline" className="text-sm font-medium">
             پروژه‌های ما

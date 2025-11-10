@@ -8,13 +8,13 @@ const teamMembers = [
     id: 1,
     name: "عرفان کاشف",
     role: "کارشناس برنامه‌نویس",
-    image: "/screens/erfankashef.png",
+    image: "/screens/kashef.png",
   },
   {
     id: 2,
     name: "آقا بدری",
     role: "طراح UI/UX",
-    image: "/screens/agha badry.jpg",
+    image: "/screens/badry.jpg",
   },
   {
     id: 3,
@@ -40,7 +40,7 @@ const MemberInfo = () => {
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
-      <div className="pb-10">
+      <div id="team" className="pb-10">
         <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
           <Badge variant="outline" className="text-sm font-medium">
             تیم ما
