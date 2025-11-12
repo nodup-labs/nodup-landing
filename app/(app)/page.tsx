@@ -1,15 +1,14 @@
 "use client";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { Badge } from "@/components/ui/badge";
-import AboutUsSection from "./components/aboutus-section";
 import BackgroundImage from "./components/backgroundImage";
+import Collaboration from "./components/collaboration";
 import Contact1 from "./components/Contact1";
 import FAQ1 from "./components/FAQ1";
 import MemberInfo from "./components/memberinfo";
 import Parallax from "./components/Parallax";
 import ProjectGrid from "./components/projectGrid";
 import WhyChooseUs from "./components/whychoseus";
-import Collaboration from "./components/collaboration";
 
 export default function Home() {
   const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
