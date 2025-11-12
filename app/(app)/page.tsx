@@ -1,8 +1,8 @@
 "use client";
 import { WordRotate } from "@/components/magicui/word-rotate";
 import { Badge } from "@/components/ui/badge";
-import AboutUsSection from "./components/aboutus-section";
 import BackgroundImage from "./components/backgroundImage";
+import Collaboration from "./components/collaboration";
 import Contact1 from "./components/Contact1";
 import FAQ1 from "./components/FAQ1";
 import MemberInfo from "./components/memberinfo";
@@ -55,7 +55,10 @@ export default function Home() {
         {/* <Services /> */}
 
         {/* about us */}
-        <AboutUsSection />
+        {/* <AboutUsSection /> */}
+
+        {/* Collaboration */}
+        <Collaboration />
 
         {/* whay choose us */}
         <WhyChooseUs />

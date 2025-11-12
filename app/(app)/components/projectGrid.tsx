@@ -1,12 +1,11 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
 const ProjectGrid = () => {
-  const router = useRouter();
+  // navigation removed: clicking should no longer navigate to product pages
 
   const columns = [
     [
@@ -120,9 +119,7 @@ const ProjectGrid = () => {
     setActiveKey(null);
   };
 
-  const handleClick = (id: string) => {
-    router.push(`/projects/${id}`);
-  };
+  // handleClick intentionally removed to disable navigation on click
 
   return (
     <motion.div
@@ -165,8 +162,7 @@ const ProjectGrid = () => {
                       key={j}
                       onMouseMove={(e) => handleMouseMove(e, key)}
                       onMouseLeave={() => handleMouseLeave(key)}
-                      onClick={() => handleClick(item.id)}
-                      className="relative cursor-pointer rounded-lg transition-all duration-300"
+                      className="relative rounded-lg transition-all duration-300"
                       style={{
                         perspective: "1000px",
                         zIndex: isActive ? 50 : 1,
