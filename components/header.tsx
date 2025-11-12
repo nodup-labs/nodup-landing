@@ -18,8 +18,8 @@ import { Button } from "@/components/ui/button";
 const Header = () => {
   const navItems = [
     "خانه",
-    "بیشتر با ما آشنا شوید",
-    " چرا نوداپ",
+    "ما چگونه کار می‌کنیم؟",
+    "چرا نوداپ",
     "پروژه‌های ما",
     "تیم ما",
     "سؤالات متداول",
@@ -48,7 +48,7 @@ const Header = () => {
 
       // Track active section based on scroll position
       const sections = [
-        "about",
+        "How do we work?",
         "features",
         "projects",
         "team",
@@ -90,7 +90,7 @@ const Header = () => {
     } else {
       // map Persian nav labels to section ids
       const map: { [key: string]: string } = {
-        "بیشتر با ما آشنا شوید": "about",
+        "ما چگونه کار می‌کنیم؟": "How do we work?",
         "چرا نوداپ": "features",
         "پروژه‌های ما": "projects",
         "تیم ما": "team",
@@ -113,7 +113,7 @@ const Header = () => {
   const isActiveItem = (item: string) => {
     const map: { [key: string]: string } = {
       خانه: "home",
-      "بیشتر با ما آشنا شوید": "about",
+      "ما چگونه کار می‌کنیم؟": "How do we work?",
       "چرا نوداپ": "features",
       "پروژه‌های ما": "projects",
       "تیم ما": "team",

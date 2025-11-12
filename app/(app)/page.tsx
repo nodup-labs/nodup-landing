@@ -9,6 +9,7 @@ import MemberInfo from "./components/memberinfo";
 import Parallax from "./components/Parallax";
 import ProjectGrid from "./components/projectGrid";
 import WhyChooseUs from "./components/whychoseus";
+import Collaboration from "./components/collaboration";
 
 export default function Home() {
   const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
@@ -55,7 +56,10 @@ export default function Home() {
         {/* <Services /> */}
 
         {/* about us */}
-        <AboutUsSection />
+        {/* <AboutUsSection /> */}
+
+        {/* Collaboration */}
+        <Collaboration />
 
         {/* whay choose us */}
         <WhyChooseUs />
