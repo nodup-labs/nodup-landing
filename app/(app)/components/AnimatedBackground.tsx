@@ -33,7 +33,7 @@ export default function AnimatedBackground({
       <div className="hidden lg:block absolute inset-0 pointer-events-none">
         {/* Orb 1 */}
         <motion.div
-          className="absolute left-[10%] top-[15%] w-[320px] h-[320px] dark:w-[160px] dark:h-[160px] rounded-full bg-indigo-200 dark:bg-indigo-900 opacity-90 blur-[60px]"
+          className="absolute left-[10%] top-[15%] w-[320px] h-[320px] dark:w-[160px] dark:h-[160px] rounded-full bg-[#ffbb80]/60 dark:bg-[#ff7a29]/40 opacity-90 blur-[60px]"
           animate={{
             scale: [1, 1.13, 1],
             opacity: [0.85, 1, 0.85],
@@ -45,7 +45,7 @@ export default function AnimatedBackground({
 
         {/* Orb 1 core */}
         <motion.div
-          className="absolute left-[18%] top-[23%] w-[90px] h-[90px] rounded-full bg-indigo-100 dark:bg-indigo-950 opacity-95 blur-[10px]"
+          className="absolute left-[18%] top-[23%] w-[90px] h-[90px] rounded-full bg-[#ffd6b3]/90 dark:bg-[#ff914d]/70 opacity-95 blur-[10px]"
           animate={{
             scale: [1, 1.08, 1],
             opacity: [0.92, 1, 0.92],
@@ -57,7 +57,7 @@ export default function AnimatedBackground({
 
         {/* Orb 2 */}
         <motion.div
-          className="absolute right-[12%] top-[30%] w-[220px] h-[220px] rounded-full bg-indigo-300 dark:bg-indigo-950 opacity-80 blur-[40px]"
+          className="absolute right-[12%] top-[30%] w-[220px] h-[220px] rounded-full bg-[#ffb380]/50 dark:bg-[#ff7a29]/40 opacity-80 blur-[40px]"
           animate={{
             scale: [1, 1.08, 1],
             opacity: [0.75, 0.95, 0.75],
@@ -67,29 +67,30 @@ export default function AnimatedBackground({
           transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
         />
 
-        {/* Orb 3 */}
-        <motion.div
-          className="absolute left-[35%] bottom-[18%] w-[180px] h-[180px] rounded-full bg-blue-200 dark:bg-blue-600 opacity-80 blur-[30px]"
-          animate={{
-            scale: [1, 1.16, 1],
-            opacity: [0.7, 0.9, 0.7],
-            x: mouse.x * 40,
-            y: mouse.y * -60,
-          }}
-          transition={{ duration: 11, repeat: Infinity, ease: "easeInOut" }}
-        />
+  {/* Orb 3 */}
+<motion.div
+  className="absolute left-[35%] bottom-[18%] w-[180px] h-[180px] rounded-full bg-[#ffe0c2]/70 dark:bg-[#ff995a]/50 opacity-80 blur-[30px]"
+  animate={{
+    scale: [1, 1.16, 1],
+    opacity: [0.7, 0.9, 0.7],
+    x: mouse.x * 40,
+    y: mouse.y * -60,
+  }}
+  transition={{ duration: 11, repeat: Infinity, ease: 'easeInOut' }}
+/>
 
-        {/* Orb 4 */}
-        <motion.div
-          className="absolute right-[22%] bottom-[8%] w-[150px] h-[150px] rounded-full bg-indigo-100 opacity-90 blur-[20px]"
-          animate={{
-            scale: [1, 1.11, 1],
-            opacity: [0.8, 1, 0.8],
-            x: mouse.x * -30,
-            y: mouse.y * -40,
-          }}
-          transition={{ duration: 13, repeat: Infinity, ease: "easeInOut" }}
-        />
+{/* Orb 4 */}
+<motion.div
+  className="absolute right-[22%] bottom-[8%] w-[150px] h-[150px] rounded-full bg-[#ffd1a3]/80 dark:bg-[#ff8a3d]/60 opacity-90 blur-[20px]"
+  animate={{
+    scale: [1, 1.11, 1],
+    opacity: [0.8, 1, 0.8],
+    x: mouse.x * -30,
+    y: mouse.y * -40,
+  }}
+  transition={{ duration: 13, repeat: Infinity, ease: 'easeInOut' }}
+/>
+
 
         {/* Gradients */}
         <motion.div
