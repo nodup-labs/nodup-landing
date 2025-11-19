@@ -34,9 +34,10 @@ export default async function RootLayout({
         <AnimatedBackground>
           <ThemeProvider
             attribute="class"
-            defaultTheme="system"
+            defaultTheme="dark"
+            forcedTheme="dark"
+            enableSystem={false}
             storageKey="saas-theme"
-            enableSystem
             disableTransitionOnChange
             enableColorScheme
           >

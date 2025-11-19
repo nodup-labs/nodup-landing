@@ -15,9 +15,9 @@ const Features1 = () => {
       colors: {
         bg: "bg-gray-700/30",
         icon: "text-blue-600",
-        hover: "hover:border-blue-500",
+        hover: "hover:border-[#ff914d]",
         shadow: "group-hover:shadow-blue-500/30",
-        gradient: "from-blue-500 via-blue-600 to-blue-700",
+        gradient: "from-orange-400 via-orange-500 to-orange-600",
         text: "group-hover:text-blue-700",
       },
     },
@@ -30,9 +30,9 @@ const Features1 = () => {
       colors: {
         bg: "bg-red-100/40 dark:bg-red-950/40",
         icon: "text-red-600",
-        hover: "hover:border-red-500",
+        hover: "hover:border-[#ff914d]",
         shadow: "group-hover:shadow-red-500/30",
-        gradient: "from-red-500 via-red-600 to-red-700",
+        gradient: "from-orange-400 via-orange-500 to-orange-600",
         text: "group-hover:text-red-700",
       },
     },
@@ -45,9 +45,9 @@ const Features1 = () => {
       colors: {
         bg: "bg-emerald-100/40 dark:bg-emerald-950/40",
         icon: "text-emerald-600",
-        hover: "hover:border-emerald-500",
+        hover: "hover:border-[#ff914d]",
         shadow: "group-hover:shadow-emerald-500/30",
-        gradient: "from-emerald-500 via-emerald-600 to-emerald-700",
+        gradient: "from-orange-400 via-orange-500 to-orange-600",
         text: "group-hover:text-emerald-700",
       },
     },
@@ -60,9 +60,9 @@ const Features1 = () => {
       colors: {
         bg: "bg-gray-700/30",
         icon: "text-amber-600",
-        hover: "hover:border-amber-500",
+        hover: "hover:border-[#ff914d]",
         shadow: "group-hover:shadow-amber-500/30",
-        gradient: "from-amber-500 via-amber-600 to-amber-700",
+        gradient: "from-orange-400 via-orange-500 to-orange-600",
         text: "group-hover:text-amber-700",
       },
     },
@@ -85,7 +85,7 @@ const Features1 = () => {
             >
               <Card
                 className={cn(
-                  "h-full border border-border transition-all duration-500 p-8 relative overflow-hidden hover:shadow-lg",
+                  "h-full border border-border transition-all duration-500 p-8 relative overflow-hidden hover:shadow-lg bg-white/10 backdrop-blur-sm",
                   feature.colors.hover
                 )}
               >

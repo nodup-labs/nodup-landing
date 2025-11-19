@@ -89,9 +89,9 @@ const FAQ1 = () => {
               >
                 <AccordionItem
                   value={`item-${index}`}
-                  className="bg-gray-700/30 rounded-lg border! border-border px-6 hover:shadow-md transition-shadow"
+                  className="bg-white/10 rounded-lg border! border-border px-6 hover:shadow-md transition-shadow backdrop-blur-sm"
                 >
-                  <AccordionTrigger className="text-start font-semibold text-foreground hover:text-indigo-600 data-[state=open]:text-indigo-600 transition-colors cursor-pointer">
+                  <AccordionTrigger className="text-start font-semibold text-foreground hover:text-[#ff914d] data-[state=open]:text-[#ff914d] transition-colors cursor-pointer">
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent className="text-foreground leading-relaxed">
@@ -114,7 +114,7 @@ const FAQ1 = () => {
 
           <Link
             href="#contact"
-            className="text-indigo-600 hover:text-indigo-700 transition-colors hover:underline"
+            className="text-[#ff914d] hover:text-[#ff914d]transition-colors hover:underline"
           >
             با تیم پشتیبانی ما تماس بگیرید
           </Link>

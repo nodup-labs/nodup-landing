@@ -47,7 +47,7 @@ const Collaboration = () => {
         <Badge variant="outline" className="text-sm font-medium">
           ما چگونه کار می‌کنیم؟
         </Badge>
-        <p className="text-2xl md:text-4xl font-bold max-w-4xl text-center leading-16 ">
+        <p className="text-2xl md:text-4xl font-bold max-w-4xl text-center leading-16۱ ">
           با طراحان آینده‌نگر و خلاقی آشنا شوید که پشت موفقیت نوداپ قرار دارند.
         </p>
         <p className="text-base md:text-xl font-normal text-neutral-300  text-center max-w-2xl leading-10">

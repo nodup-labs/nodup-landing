@@ -24,7 +24,10 @@ export default function Home() {
           <p className="text-sm md:text-base font-medium">
             آژانس طراحی رابط و تجربه کاربری و وب برای
           </p>
-          <Badge variant={"outline"} className="text-sm font-medium">
+          <Badge
+            variant={"outline"}
+            className="text-sm font-medium text-primary"
+          >
             برنامه نویسی
           </Badge>
           <Badge variant={"outline"} className="text-sm font-medium">
@@ -34,15 +37,19 @@ export default function Home() {
 
         <div className="text-center mt-12 md:mt-20 mx-auto relative z-30 px-4">
           <p className="flex flex-col md:flex-row items-center gap-1 justify-center text-xl md:text-2xl lg:text-5xl font-bold mb-8 leading-[1.2]">
-            <span className="bg-gradient-to-r from-indigo-900 via-blue-900 to-indigo-900 dark:from-gray-50 dark:via-blue-300 dark:to-indigo-900 bg-clip-text text-transparent">
+            {/* جمله ثابت */}
+            <span className="">
               شریک طراحی قابل‌اعتماد شما، با تیمی حرفه‌ای در زمینهٔ
             </span>
+
+            {/* کلمات چرخان */}
             <WordRotate
               words={rotatingWords}
-              className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent w-full md:w-[365px] max-w-[365px]"
+              className="r text-[#ff914d] ] bg-clip-text  w-full md:w-[365px] max-w-[365px]"
             />
           </p>
-          <p className="text-base md:text-xl font-normal text-center mt-4">
+
+          <p className="text-base md:text-xl font-normal text-center mt-4 ]">
             ما معتقدیم ارائه‌ها باید فراتر از یک پرزنتیشن ساده باشند؛ تجربه‌هایی
             تأثیرگذار و به‌یادماندنی خلق می‌کنیم.
           </p>

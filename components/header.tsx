@@ -11,8 +11,7 @@ import {
 } from "@/components/ui/drawer";
 import Logo from "@/components/logo";
 import { cn } from "@/lib/utils";
-import { useTheme } from "next-themes";
-import { Sun, Moon } from "lucide-react";
+// theme is forced to dark in the root ThemeProvider; no client toggle needed
 import { Button } from "@/components/ui/button";
 
 const Header = () => {
@@ -26,15 +25,9 @@ const Header = () => {
     "با ما در ارتباط باشید",
   ];
 
-  const { resolvedTheme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -162,13 +155,13 @@ const Header = () => {
                 className={cn(
                   "cursor-pointer transition-colors relative group",
                   isActiveItem(item)
-                    ? "text-indigo-600 dark:text-indigo-400"
-                    : "text-accent-foreground hover:text-indigo-600 dark:hover:text-indigo-400"
+                    ? "text-indigo-600 dark:text-[#ff914d]"
+                    : "text-accent-foreground hover:text-indigo-600 dark:hover:text-[#ff914d]"
                 )}
               >
                 {item}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-[#ff914d] transition-all ${
                     isActiveItem(item) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
@@ -212,7 +205,7 @@ const Header = () => {
                       className="w-full"
                       onClick={() => setIsOpen(false)}
                     >
-                      Get Started
+                      شروع همکاری
                     </RainbowButton>
                   </div>
                 </nav>
@@ -220,23 +213,7 @@ const Header = () => {
             </Drawer>
           </div>
 
-          {/* Theme Toggle */}
-          {mounted && (
-            <Button
-              className="cursor-pointer text-muted-foreground hover:bg-transparent hover:text-foreground"
-              variant="ghost"
-              size="icon"
-              onClick={() =>
-                setTheme(resolvedTheme === "dark" ? "light" : "dark")
-              }
-            >
-              {resolvedTheme === "dark" ? (
-                <Sun className="size-4" />
-              ) : (
-                <Moon className="size-4" />
-              )}
-            </Button>
-          )}
+          {/* Theme is forced to dark globally; toggle removed */}
         </div>
       </div>
     </motion.header>
