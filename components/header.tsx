@@ -155,13 +155,13 @@ const Header = () => {
                 className={cn(
                   "cursor-pointer transition-colors relative group",
                   isActiveItem(item)
-                    ? "text-indigo-600 dark:text-indigo-400"
-                    : "text-accent-foreground hover:text-indigo-600 dark:hover:text-indigo-400"
+                    ? "text-indigo-600 dark:text-[#ff914d]"
+                    : "text-accent-foreground hover:text-indigo-600 dark:hover:text-[#ff914d]"
                 )}
               >
                 {item}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-indigo-400 transition-all ${
+                  className={`absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-[#ff914d] transition-all ${
                     isActiveItem(item) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
