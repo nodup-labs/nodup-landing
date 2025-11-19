@@ -22,7 +22,7 @@ const Footer1 = () => {
   ];
 
   return (
-    <footer className="bg-gray-700/30 relative overflow-hidden rounded-lg container mx-auto">
+    <footer className="backdrop-blur-sm bg-white/10 relative overflow-hidden rounded-lg container mx-auto">
       <div className="container px-6 mx-auto pt-14 pb-6 border-b border-border/50">
         <div className="flex justify-center items-center text-center">
           <motion.div
@@ -61,7 +61,7 @@ const Footer1 = () => {
         <Separator className="my-6 bg-border/50" />
 
         <div className="flex flex-col md:flex-row justify-between items-center">
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-sm hover:text-[#ff914d] hover:underline">
             © ۲۰۲۵ نوداپ. تمامی حقوق محفوظ است.
           </p>
           <p className="text-muted-foreground text-sm mt-4 md:mt-0">
@@ -69,7 +69,7 @@ const Footer1 = () => {
               href="https://keenthemes.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-foreground hover:text-indigo-600 hover:underline"
+              className="text-foreground hover:text-[#ff914d] hover:underline"
             >
               NODUP
             </a>
