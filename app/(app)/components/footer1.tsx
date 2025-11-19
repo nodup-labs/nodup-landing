@@ -5,11 +5,7 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer1 = () => {
-  const links = {
-    محصول: ["ویژگی‌ها", "قیمت‌گذاری", "API", "راهنما"],
-    شرکت: ["درباره ما", "بلاگ", "شغل‌ها", "تماس با ما"],
-    پشتیبانی: ["مرکز کمک", "انجمن", "وضعیت سرویس", "امنیت"],
-  };
+
 
   const socialLinks = [
     { icon: Github, href: "https://github.com/nodup-labs", label: "GitHub" },
