@@ -10,8 +10,7 @@ const Features1 = () => {
       icon: Zap,
       title: "نوآوری هدفمند",
       description:
-        "ما دنباله‌رو ترندها نیستیم — آن‌ها را خلق می‌کنیم. با نگاهی عمیق و الهام‌گرفته از بینش، طراحی‌هایی می‌سازیم که تجربه‌ای ماندگار برای مخاطب به‌جا می‌گذارند",
-
+        "ما دنبال ترندها نیستیم—آن‌ها را خلق می‌کنیم. با نگاهی عمیق و الهام از بینش، طراحی‌هایی می‌سازیم که تجربه‌ای ماندگار برای مخاطب ایجاد می‌کنند.",
       colors: {
         bg: "bg-gray-700/30",
         icon: "text-blue-600",
@@ -26,7 +25,7 @@ const Features1 = () => {
       icon: Shield,
       title: "هسته‌ای با محوریت کاربر",
       description:
-        "مردم همیشه در اولویت ما هستند. ما با درک دقیق دنیای کاربران شما، طراحی‌هایی می‌سازیم که ارتباط واقعی ایجاد کرده و تجربه‌ای معنادار خلق می‌کنند.",
+        "مردم همیشه در اولویت ما هستند. با درک دقیق دنیای کاربران، طراحی‌هایی خلق می‌کنیم که ارتباط واقعی و تجربه‌ای معنادار ایجاد می‌کنند.",
       colors: {
         bg: "bg-red-100/40 dark:bg-red-950/40",
         icon: "text-red-600",
@@ -41,7 +40,7 @@ const Features1 = () => {
       icon: Users,
       title: "تیمی از متخصصان حرفه‌ای",
       description:
-        "طراح‌های متخصص ما مهارت‌ها و دیدگاه‌های متنوعی رو با هم ترکیب می‌کنن و با این رویکرد کامل، هر پروژه رو به یه تجربه‌ی منحصربه‌فرد تبدیل می‌کنن.",
+        "طراحان متخصص ما مهارت‌ها و دیدگاه‌های متنوع را با هم ترکیب می‌کنند تا هر پروژه به تجربه‌ای منحصربه‌فرد تبدیل شود.",
       colors: {
         bg: "bg-emerald-100/40 dark:bg-emerald-950/40",
         icon: "text-emerald-600",
@@ -56,7 +55,7 @@ const Features1 = () => {
       icon: BarChart3,
       title: "فرآیندی روشن و بدون ابهام",
       description:
-        "ما با برقراری ارتباطی شفاف، شما را در هر مرحله همراه می‌کنیم و با این رویکرد اعتماد و اطمینان کامل را در طول فرآیند طراحی ایجاد می‌کنیم.",
+        "ما با برقراری ارتباط شفاف، در هر مرحله همراه شما هستیم و اعتماد و اطمینان کامل را در فرآیند طراحی ایجاد می‌کنیم.",
       colors: {
         bg: "bg-gray-700/30",
         icon: "text-amber-600",
@@ -90,7 +89,6 @@ const Features1 = () => {
                 )}
               >
                 <CardContent className="p-0">
-                  {/* Header */}
                   <div className="flex items-start justify-between mb-8">
                     <div
                       className={cn(
@@ -107,7 +105,6 @@ const Features1 = () => {
                     </div>
                   </div>
 
-                  {/* Content */}
                   <h3 className="text-2xl font-bold text-foreground mb-6 group-hover:text-foreground transition-colors leading-tight">
                     {feature.title}
                   </h3>
@@ -117,7 +114,6 @@ const Features1 = () => {
                   </p>
                 </CardContent>
 
-                {/* Hover effect gradient border */}
                 <div
                   className={cn(
                     "absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left",
@@ -126,7 +122,6 @@ const Features1 = () => {
                   )}
                 />
 
-                {/* Subtle gradient overlay on hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-50/0 to-slate-100/0 group-hover:from-slate-50/30 group-hover:to-slate-100/10 dark:from-slate-900/0 dark:to-slate-800/0 transition-all duration-500 pointer-events-none" />
               </Card>
             </motion.div>

@@ -44,16 +44,15 @@ const Collaboration = () => {
   return (
     <div id="How do we work?">
       <div className="flex flex-col items-center gap-6 md:gap-2 pb-16  md:text-left">
-        <Badge variant="outline" className="text-sm font-medium">
+        <Badge variant="outline" className="text-sm font-medium mb-10">
           ما چگونه کار می‌کنیم؟
         </Badge>
-        <p className="text-2xl md:text-4xl font-bold max-w-4xl text-center leading-16۱ ">
-          با طراحان آینده‌نگر و خلاقی آشنا شوید که پشت موفقیت نوداپ قرار دارند.
+        <p className="text-2xl md:text-4xl font-bold max-w-4xl text-center leading-16 ">
+          با طراحان خلاق و آینده‌نگری آشنا شوید که موفقیت نوداپ را رقم زده‌اند
         </p>
         <p className="text-base md:text-xl font-normal text-neutral-300  text-center max-w-2xl leading-10">
-          پایه‌های ما بر سه ستون کلیدی استوار است: افراد، آگاهی و رشد. این سه
-          عنصر با هم یک سیستم ارزش متصل ایجاد می‌کنند که مسیر موفقیت ما را
-          می‌سازد.
+          سه ستون موفقیت ما: افراد، آگاهی و رشد—سیستمی که ارزش خلق می‌کند و مسیر
+          پیشرفت را هموار می‌سازد.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-3 relative mb-36 px-2 md:px-0">

@@ -5,8 +5,6 @@ import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Footer1 = () => {
-
-
   const socialLinks = [
     { icon: Github, href: "https://github.com/nodup-labs", label: "GitHub" },
     {
@@ -33,8 +31,8 @@ const Footer1 = () => {
             </div>
 
             <p className="text-muted-foreground mb-6">
-              «کسب‌وکار خود را با پلتفرم قدرتمند ما دگرگون کنید. رشد سریع‌تر،
-              کارکرد هوشمندانه‌تر و پیشرفت بزرگ‌تر را تجربه کنید.»
+              "با پلتفرم قدرتمند ما، مسیر رشد کسب‌وکارتان را سریع‌تر و
+              هوشمندانه‌تر طی کنید."
             </p>
 
             <div className="flex justify-center space-x-4">

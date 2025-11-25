@@ -12,7 +12,7 @@ const WhyChooseUs = () => {
           چرا نوداپ و نه دیگران
         </p>
         <p className="text-base md:text-xl font-normal text-neutral-300  text-center max-w-2xl leading-10">
-          از ایده تا نمونه‌ی واقعی — در نوداپ طرح‌های وب را به محصولاتی دقیق و
+          از ایده تا نمونه واقعی—در نوداپ، طرح‌های وب را به محصولات دقیق و
           کاربردی تبدیل می‌کنیم.
         </p>
       </div>
