@@ -31,8 +31,8 @@ const Footer1 = () => {
             </div>
 
             <p className="text-muted-foreground mb-6">
-              "با پلتفرم قدرتمند ما، مسیر رشد کسب‌وکارتان را سریع‌تر و
-              هوشمندانه‌تر طی کنید."
+              با پلتفرم قدرتمند ما، مسیر رشد کسب‌وکارتان را سریع‌تر و
+              هوشمندانه‌تر طی کنید.
             </p>
 
             <div className="flex justify-center space-x-4">
