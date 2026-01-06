@@ -8,13 +8,13 @@ const WhyChooseUs = () => {
         <Badge variant="outline" className="text-sm font-medium">
           چرا نوداپ
         </Badge>
-        <p className="text-2xl md:text-4xl font-bold max-w-3xl text-center leading-16 ">
-          چرا نوداپ و نه دیگران
-        </p>
-        <p className="text-base md:text-xl font-normal text-neutral-300  text-center max-w-2xl leading-10">
-          از ایده تا نمونه واقعی—در نوداپ، طرح‌های وب را به محصولات دقیق و
-          کاربردی تبدیل می‌کنیم.
-        </p>
+       <p className="text-2xl md:text-4xl font-bold max-w-3xl text-center leading-16">
+  چرا تیم‌ها نودآپ را انتخاب می‌کنند؟
+</p>
+
+<p className="text-base md:text-xl font-normal text-neutral-300 text-center  leading-10">
+  چون برای ما، طراحی فقط ظاهر نیست؛ تصمیمی است که روی محصول، کاربر و رشد تأثیر می‌گذارد.
+</p>
       </div>
       <div>
         <Features1 />

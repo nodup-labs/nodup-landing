@@ -1,7 +1,5 @@
 import { cn } from "@/lib/utils";
-import { TooltipProvider } from "@radix-ui/react-tooltip";
 import { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { ReactNode } from "react";
 
 import { peyda } from "@/lib/font";
@@ -9,6 +7,8 @@ import "@/styles/globals.css";
 import Header from "@/components/header";
 import Footer1 from "./(app)/components/footer1";
 import AnimatedBackground from "./(app)/components/AnimatedBackground";
+import { Providers } from "./providers";
+import { Ripple } from "@/components/ui/ripple";
 
 export const metadata: Metadata = {
   title: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: ReactNode;
@@ -30,22 +30,19 @@ export default async function RootLayout({
           "antialiased text-base text-foreground bg-background",
           peyda.variable
         )}
-      >
+      >    
+      
         <AnimatedBackground>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            forcedTheme="dark"
-            enableSystem={false}
-            storageKey="saas-theme"
-            disableTransitionOnChange
-            enableColorScheme
-          >
+          <div className="absolute top-0 left-0 w-full h-full">
+          <Ripple centerY="0%" />
+      </div>
+          <Providers>
+            
             <Header />
-
-            <TooltipProvider>{children}</TooltipProvider>
+            
+            {children}
             <Footer1 />
-          </ThemeProvider>
+          </Providers>
         </AnimatedBackground>
       </body>
     </html>

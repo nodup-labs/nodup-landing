@@ -28,7 +28,7 @@ const CollaborationCard = ({
         {/* Text content */}
         <div className="-mt-4 md:-mt-10">
           <p className="text-base md:text-lg font-bold text-white">{title}</p>
-          <p className="text-sm md:text-lg font-normal text-white/70">
+          <p className="text-sm md:text-sm font-normal text-white/70">
             {description}
           </p>
         </div>

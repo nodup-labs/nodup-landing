@@ -1,3 +1,5 @@
+import './server-localstorage-shim';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // For local development, basePath is '/'

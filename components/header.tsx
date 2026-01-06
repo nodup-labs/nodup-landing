@@ -125,6 +125,7 @@ const Header = () => {
 
   return (
     <motion.header
+      
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={cn(
@@ -136,14 +137,13 @@ const Header = () => {
     >
       <div
         className={cn(
-          "container mx-auto px-6 py-4 flex items-center justify-between"
+          "container mx-auto px-6 py-4 flex  items-center justify-between relative text-right"
         )}
       >
         <Logo />
 
-        <div className="flex items-center gap-2.5">
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+        {/* Centered Desktop Navigation */}
+        <nav className="  hidden md:flex items-center gap-6">
             {/* Nav items */}
             {navItems.map((item, index) => (
               <motion.button
@@ -153,26 +153,27 @@ const Header = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: (index + 2) * 0.1 }}
                 className={cn(
-                  "cursor-pointer transition-colors relative group",
+                  "cursor-pointer transition-colors font-light relative group",
                   isActiveItem(item)
-                    ? "text-indigo-600 dark:text-[#ff914d]"
-                    : "text-accent-foreground hover:text-indigo-600 dark:hover:text-[#ff914d]"
+                    ? " dark:text-[#ff914d] font-bold"
+                    : "text-accent-foreground  dark:hover:text-[#ff914d]"
                 )}
               >
                 {item}
                 <span
-                  className={`absolute -bottom-1 left-0 h-0.5 bg-indigo-600 dark:bg-[#ff914d] transition-all ${
+                  className={`absolute -bottom-1 right-0 h-0.5 dark:bg-[#ff914d] transition-all ${
                     isActiveItem(item) ? "w-full" : "w-0 group-hover:w-full"
                   }`}
                 ></span>
               </motion.button>
             ))}
+        </nav>
 
-            <Button variant="default">شروع همکاری</Button>
-          </nav>
+        <div className="flex items-center gap-2.5">
+          <Button variant="default">شروع همکاری</Button>
 
           {/* Mobile Navigation */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden flex items-center gap-4">
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
                 <Button
@@ -192,7 +193,7 @@ const Header = () => {
                       onClick={() => handleNavClick(item)}
                       variant="ghost"
                       className={cn(
-                        "w-full justify-start hover:text-indigo-600 dark:hover:text-indigo-400",
+                        "w-full justify-end hover:text-indigo-600 dark:hover:text-indigo-400",
                         isActiveItem(item) &&
                           "text-indigo-600 dark:text-indigo-400 font-medium"
                       )}

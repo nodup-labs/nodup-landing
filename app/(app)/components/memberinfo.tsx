@@ -6,27 +6,31 @@ import { useState } from "react";
 const teamMembers = [
   {
     id: 1,
-    name: "عرفان کاشف",
-    role: "کارشناس برنامه‌نویس",
-    image: "/screens/kashef.png",
+    name: "امیرحسین خطابخش",
+    role: "Full Stack Developer",
+    image: "/screens/amirhossein.jpg",
+    bio: "برنامه‌نویس فول‌استک با تمرکز روی ایجاد محصولاتی با کیفیت و مقیاس‌پذیر."
   },
   {
     id: 2,
-    name: "آقا بدری",
-    role: "طراح UI/UX",
-    image: "/screens/badry.jpg",
+    name: "محمدرضا بدری",
+    role: "CTO",
+    image: "/screens/mohammadreza.jpg",
+    bio: "مسئول راهبری فنی و معماری محصولات نودآپ؛ هدایت تیم توسعه به سمت موفقیت."
   },
   {
     id: 3,
-    name: "علی کاشف",
-    role: "تحلیل‌گر داده",
-    image: "/screens/alikashef.jpg",
+    name: "عرفان کاشف",
+    role: "کارشناس فرانت‌اند",
+    image: "/screens/erfan.png",
+    bio: "توسعه‌دهنده فرانت‌اند که تجربه کاربری را با طراحی دقیق ترکیب می‌کند."
   },
   {
     id: 4,
-    name: "خطابخش",
-    role: "مدیر پروژه",
-    image: "/screens/khatabakhsh.jpg",
+    name: "علی کاشف",
+    role: "مدیر عامل و طراح محصول",
+    image: "/screens/alikashef.jpg",
+    bio: "هدایت محصول و طراحی تجربه کاربری، با نگاه به نوآوری و رشد مستمر."
   },
 ];
 
@@ -45,13 +49,13 @@ const MemberInfo = () => {
           <Badge variant="outline" className="text-sm font-medium">
             تیم ما
           </Badge>
-          <p className="text-2xl md:text-4xl font-bold max-w-4xl text-center leading-16 ">
+          <p className="text-2xl md:text-4xl font-bold  text-center leading-16 ">
             با تیمی از طراحان خلاق و آینده‌نگر آشنا شوید که پشت موفقیت نوداپ
             هستند
           </p>
-          <p className="text-base md:text-xl font-normal text-neutral-300  text-center max-w-2xl leading-10">
-            سه ستون موفقیت ما: افراد، آگاهی و رشد—سیستمی که ارزش خلق می‌کند و
-            مسیر پیشرفت را هموار می‌سازد.
+          <p className="text-base md:text-xl font-normal text-neutral-300 text-center max-w-2xl leading-10">
+            سرمایه اصلی ما افراد متخصص و فرآیندهایی است که مسیر رشد را هموار
+            می‌کنند.
           </p>
         </div>
         <motion.div
@@ -60,7 +64,7 @@ const MemberInfo = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="flex flex-wrap justify-center gap-8 py-10">
+          <div className="flex flex-wrap justify-center gap-4 py-10">
             {teamMembers.map((member) => {
               const isHovered = hoveredId === member.id;
 
@@ -117,6 +121,17 @@ const MemberInfo = () => {
                       className="text-gray-300 text-sm"
                     >
                       {member.role}
+                    </motion.p>
+                     <motion.p
+                      initial={{ y: 10, opacity: 0 }}
+                      animate={{
+                        y: isHovered ? 0 : 10,
+                        opacity: isHovered ? 1 : 0,
+                      }}
+                      transition={{ duration: 0.3, delay: isHovered ? 0.2 : 0 }}
+                      className="text-gray-300 text-sm"
+                    >
+                      {member.bio}
                     </motion.p>
                   </motion.div>
                 </motion.div>

@@ -1,3 +1,5 @@
+"use client";
+
 import { CustomSubtitle } from "@/components/custom/subtitle";
 import { CustomTitle } from "@/components/custom/title";
 import { Badge } from "@/components/ui/badge";

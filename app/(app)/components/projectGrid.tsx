@@ -99,14 +99,12 @@ const ProjectGrid = () => {
             <Badge variant="outline" className="text-sm font-medium">
               پروژه‌های ما
             </Badge>
-            <p className="text-2xl md:text-4xl font-bold max-w-4xl text-center leading-16 ">
-              با طراحان آینده‌نگر و خلاقی آشنا شوید که پشت موفقیت نوداپ قرار
-              دارند.
+            <p className="text-2xl md:text-4xl font-bold max-w-4xl text-center leading-16">
+              کارهایی که به آن‌ها افتخار می‌کنیم
             </p>
+
             <p className="text-base md:text-xl font-normal text-neutral-300 text-center max-w-2xl leading-10">
-              پایه‌های ما بر سه ستون کلیدی استوار است: افراد، آگاهی و رشد. این
-              سه عنصر با هم یک سیستم ارزش متصل ایجاد می‌کنند که مسیر موفقیت ما
-              را می‌سازد.
+              پروژه‌هایی که برای تیم‌ها ارزش واقعی ساخته‌اند، نه فقط ظاهر زیبا.
             </p>
           </div>
 
