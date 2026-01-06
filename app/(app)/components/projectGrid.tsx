@@ -5,39 +5,21 @@ import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
 
 const ProjectGrid = () => {
-  const columns = [
-    [
-      {
-        id: "1",
-        src: "/screens/pixel.jpg",
-        title: "عنوان اول ۱",
-        subtitle: "زیرعنوان ۱",
-      },
-    ],
-    [
-      {
-        id: "4",
-        src: "/screens/karkhone.png",
-        title: "عنوان اول ۴",
-        subtitle: "زیرعنوان ۴",
-      },
-    ],
-    [
-      {
-        id: "7",
-        src: "/screens/negarin.jpg",
-        title: "عنوان اول ۷",
-        subtitle: "زیرعنوان ۷",
-      },
-    ],
-    [
-      {
-        id: "10",
-        src: "https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg",
-        title: "عنوان اول ۱۰",
-        subtitle: "زیرعنوان ۱۰",
-      },
-    ],
+  // Use a flat items array and let CSS Grid handle columns responsively
+  const items = [
+    { id: "1", src: "/project/1.jpg", title: "عنوان اول ۱", subtitle: "زیرعنوان ۱" },
+    { id: "2", src: "/project/2.jpg", title: "عنوان اول ۴", subtitle: "زیرعنوان ۴" },
+    { id: "3", src: "/project/3.jpg", title: "عنوان اول ۷", subtitle: "زیرعنوان ۷" },
+    { id: "4", src: "/project/4.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "5", src: "/project/5.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "6", src: "/project/6.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "7", src: "/project/7.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "8", src: "/project/8.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "9", src: "/project/9.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "9", src: "/project/10.png", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "10", src: "/project/11.png", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "12", src: "/project/12.png", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
+    { id: "13", src: "/project/13.jpeg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
   ];
 
   const [hoverStyle, setHoverStyle] = useState<{ [key: string]: string }>({});
@@ -114,70 +96,63 @@ const ProjectGrid = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-2 relative z-0">
-              {columns.map((col, i) => (
-                <div key={i} className="grid gap-2">
-                  {col.map((item, j) => {
-                    const key = `${i}-${j}`;
-                    const isActive = activeKey === key;
+            <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-3 relative z-0">
+              {items.map((item, idx) => {
+                const key = `${idx}`;
+                const isActive = activeKey === key;
 
-                    return (
-                      <div
-                        key={j}
-                        onMouseMove={(e) => handleMouseMove(e, key)}
-                        onMouseLeave={() => handleMouseLeave(key)}
-                        onClick={() => setSelectedImage(item.src)} // اضافه شده
-                        className="relative rounded-lg transition-all duration-300 cursor-pointer"
+                return (
+                  <div
+                    key={key}
+                    onMouseMove={(e) => handleMouseMove(e, key)}
+                    onMouseLeave={() => handleMouseLeave(key)}
+                    onClick={() => setSelectedImage(item.src)}
+                    className="inline-block w-full mb-4 break-inside-avoid rounded-lg transition-all duration-300 cursor-pointer"
+                    style={{
+                      perspective: "1000px",
+                      zIndex: isActive ? 50 : 1,
+                      filter:
+                        !isActive && activeKey
+                          ? "grayscale(100%) blur(2px) brightness(0.7)"
+                          : "none",
+                    }}
+                  >
+                    <div
+                      className="transition-transform duration-300 ease-out rounded-lg shadow-xl relative overflow-hidden"
+                      style={{
+                        transformStyle: "preserve-3d",
+                        transform: hoverStyle[key] || "rotateX(0) rotateY(0)",
+                      }}
+                    >
+                      <Image
+                        className="h-auto w-full rounded-lg transition-transform duration-300"
+                        src={item.src}
+                        alt={`gallery-image-${idx}`}
+                        width={500}
+                        height={500}
                         style={{
-                          perspective: "1000px",
-                          zIndex: isActive ? 50 : 1,
-                          filter:
-                            !isActive && activeKey
-                              ? "grayscale(100%) blur(2px) brightness(0.7)"
-                              : "none",
+                          transform: isActive ? "scale(1.1)" : "scale(1)",
                         }}
-                      >
+                      />
+
+                      {isActive && (
                         <div
-                          className="transition-transform duration-300 ease-out rounded-lg shadow-xl relative overflow-hidden"
+                          className="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none"
                           style={{
-                            transformStyle: "preserve-3d",
-                            transform:
-                              hoverStyle[key] || "rotateX(0) rotateY(0)",
+                            background:
+                              "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0))",
                           }}
                         >
-                          <Image
-                            className="h-auto w-full rounded-lg transition-transform duration-300"
-                            src={item.src}
-                            alt={`gallery-image-${i}-${j}`}
-                            width={500}
-                            height={500}
-                            style={{
-                              transform: isActive ? "scale(1.1)" : "scale(1)",
-                            }}
-                          />
-
-                          {isActive && (
-                            <div
-                              className="absolute inset-0 flex flex-col justify-end p-4 pointer-events-none"
-                              style={{
-                                background:
-                                  "linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0))",
-                              }}
-                            >
-                              <p className="text-white font-bold text-lg">
-                                {item.title}
-                              </p>
-                              <p className="text-white text-sm">
-                                {item.subtitle}
-                              </p>
-                            </div>
-                          )}
+                          <p className="text-white font-bold text-lg">
+                            {item.title}
+                          </p>
+                          <p className="text-white text-sm">{item.subtitle}</p>
                         </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              ))}
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </motion.div>
         </div>
