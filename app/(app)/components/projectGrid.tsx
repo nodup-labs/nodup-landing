@@ -7,20 +7,86 @@ import { motion } from "framer-motion";
 const ProjectGrid = () => {
   // Use a flat items array and let CSS Grid handle columns responsively
   const items = [
-    { id: "1", src: "/project/1.jpg", title: "عنوان اول ۱", subtitle: "زیرعنوان ۱" },
-    { id: "2", src: "/project/2.jpg", title: "عنوان اول ۴", subtitle: "زیرعنوان ۴" },
-    { id: "3", src: "/project/3.jpg", title: "عنوان اول ۷", subtitle: "زیرعنوان ۷" },
-    { id: "4", src: "/project/4.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "5", src: "/project/5.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "6", src: "/project/6.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "7", src: "/project/7.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "8", src: "/project/8.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "9", src: "/project/9.jpg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "9", src: "/project/10.png", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "10", src: "/project/11.png", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "12", src: "/project/12.png", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-    { id: "13", src: "/project/13.jpeg", title: "عنوان اول ۱۰", subtitle: "زیرعنوان ۱۰" },
-  ];
+  {
+    id: "1",
+    src: "/project/1.jpg",
+    title: "سیستم دیزاین Pixel",
+    subtitle: "طراحی یکپارچه کامپوننت‌ها برای مقیاس‌پذیری و توسعه سریع",
+  },
+  {
+    id: "2",
+    src: "/project/2.jpg",
+    title: "وب‌سایت تبلیغاتی کیا",
+    subtitle: "طراحی لندینگ برندمحور با تمرکز بر معرفی محصول",
+  },
+  {
+    id: "3",
+    src: "/project/3.jpg",
+    title: "بانی‌شو",
+    subtitle: "پلتفرم آنلاین برای حمایت مالی و مدیریت امور خیریه",
+  },
+  {
+    id: "4",
+    src: "/project/4.jpg",
+    title: "آژانس هواپیمایی صدران سفر",
+    subtitle: "طراحی سایت خدمات سفر و رزرو بلیت با تجربه کاربری ساده",
+  },
+  {
+    id: "5",
+    src: "/project/5.jpg",
+    title: "داروخانه آنلاین",
+    subtitle: "طراحی تجربه خرید دارو با دسترسی سریع و امن",
+  },
+  {
+    id: "6",
+    src: "/project/6.jpg",
+    title: "کیس استادی مدیریت مالی شخصی",
+    subtitle: "تحلیل و طراحی اپلیکیشن برای کنترل هزینه‌ها و درآمدها",
+  },
+  {
+    id: "7",
+    src: "/project/7.jpg",
+    title: "مدل سه‌بعدی محصول",
+    subtitle: "طراحی و رندر سه‌بعدی با Blender",
+  },
+  {
+    id: "8",
+    src: "/project/8.jpg",
+    title: "مدل‌سازی فضای داخلی",
+    subtitle: "طراحی سه‌بعدی اتاق با نورپردازی و متریال واقعی",
+  },
+  {
+    id: "9",
+    src: "/project/9.jpg",
+    title: "لندینگ بیمه میهن",
+    subtitle: "طراحی صفحه فرود با تمرکز بر جذب لید و اعتمادسازی",
+  },
+  {
+    id: "10",
+    src: "/project/10.png",
+    title: "سامانه تجهیزات بیمارستانی رفیده",
+    subtitle: "طراحی پلتفرم مدیریت و تأمین تجهیزات درمانی",
+  },
+  {
+    id: "11",
+    src: "/project/11.png",
+    title: "وب‌سایت نگاه خلاق",
+    subtitle: "طراحی سایت شرکتی با هویت بصری مدرن",
+  },
+  {
+    id: "12",
+    src: "/project/12.png",
+    title: "وب‌سایت شخصی",
+    subtitle: "معرفی مهارت‌ها و نمونه‌کارها در قالب برند شخصی",
+  },
+  {
+    id: "13",
+    src: "/project/13.jpeg",
+    title: "سوپر اپلیکیشن بیمه میهن",
+    subtitle: "طراحی تجربه یکپارچه خدمات بیمه در یک اپلیکیشن جامع",
+  },
+];
+
 
   const [hoverStyle, setHoverStyle] = useState<{ [key: string]: string }>({});
   const [activeKey, setActiveKey] = useState<string | null>(null);
