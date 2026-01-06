@@ -4,8 +4,7 @@
 // or other environment causes a non-standard global.localStorage to exist.
 
 declare global {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  var localStorage: any;
+  var localStorage: Storage;
 }
 
 if (typeof globalThis.localStorage === 'undefined' || typeof globalThis.localStorage?.getItem !== 'function') {
@@ -15,7 +14,9 @@ if (typeof globalThis.localStorage === 'undefined' || typeof globalThis.localSto
     setItem: (_key: string, _value: string) => undefined,
     removeItem: (_key: string) => undefined,
     clear: () => undefined,
-  } as any;
+    length: 0,
+    key: (_index: number) => null,
+  } as Storage;
 }
 
 export {};

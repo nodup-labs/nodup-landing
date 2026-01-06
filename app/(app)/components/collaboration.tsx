@@ -1,8 +1,7 @@
 "use client";
-import Image from "next/image";
+import { Badge } from "@/components/ui/badge";
 import { useEffect, useState } from "react";
 import CollaborationCard from "./CollaborationCard";
-import { Badge } from "@/components/ui/badge";
 
 const Collaboration = () => {
   const cards = [
@@ -32,7 +31,6 @@ const Collaboration = () => {
     },
   ];
 
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
@@ -49,14 +47,14 @@ const Collaboration = () => {
           ما چگونه کار می‌کنیم؟
         </Badge>
         <p className="text-xl md:text-4xl font-bold text-center leading-16">
-  مسیر ما برای ساخت محصول
-</p>
-<p className="text-base md:text-xl font-normal text-neutral-300 text-center leading-10">
-  از شناخت مسئله تا طراحی و توسعه، هر قدم با هدف خلق ارزش واقعی برداشته می‌شود.
-</p>
+          مسیر ما برای ساخت محصول
+        </p>
+        <p className="text-base md:text-xl font-normal text-neutral-300 text-center leading-10">
+          از شناخت مسئله تا طراحی و توسعه، هر قدم با هدف خلق ارزش واقعی برداشته
+          می‌شود.
+        </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-4 gap-3 relative mb-36 px-2 md:px-0">
-       
         {cards.map((card, idx) => (
           <CollaborationCard
             key={idx}
@@ -66,7 +64,6 @@ const Collaboration = () => {
             active={idx === activeIndex}
           />
         ))}
-        
       </div>
     </div>
   );

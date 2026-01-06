@@ -1,6 +1,5 @@
 "use client";
-import { WordRotate } from "@/components/magicui/word-rotate";
-import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import BackgroundImage from "./components/backgroundImage";
 import Collaboration from "./components/collaboration";
 import Contact1 from "./components/Contact1";
@@ -9,37 +8,40 @@ import MemberInfo from "./components/memberinfo";
 import Parallax from "./components/Parallax";
 import ProjectGrid from "./components/projectGrid";
 import WhyChooseUs from "./components/whychoseus";
-import { Button } from "@/components/ui/button";
-import { Ripple } from "@/components/ui/ripple";
 
 export default function Home() {
-  const rotatingWords = ["اپلیکیشن ها ", "طراحی وب سایت ها", "برنامه نویسی ها"];
-
   return (
     <div>
       <Parallax />
 
       <BackgroundImage />
-  
-      
 
       <div className="container mx-auto px-4 flex flex-col gap-32">
-      
-
         <div className="text-center mt-4 mx-auto relative z-30 px-4 pb-44 pt-44 h-full">
-      
-        <h1 className="text-6xl font-bold ">جایی که خلاقیت، تبدیل به نرم‌افزار می‌شود</h1>
-        <p className="text-1xl pt-8">طراحی و توسعه وب‌سایت، اپلیکیشن و محصولات دیجیتال با تمرکز بر تجربه کاربری، کیفیت و خلاقیت.</p>
-        <div className=" flex flex-col md:flex-row justify-center items-center gap-4 mt-10 max-w-md mx-auto">
-          <Button className=""  size="lg">درخواست مشاوره</Button>
-          <Button className="" variant="outline" size="lg"> مشاهده نمونه‌کارها </Button>
-          {/* Scroll down animation */}
-       
-        </div>
-           <div className="w-full flex justify-center mt-6">
+          <h1 className="text-6xl font-bold ">
+            جایی که خلاقیت، تبدیل به نرم‌افزار می‌شود
+          </h1>
+          <p className="text-1xl pt-8">
+            طراحی و توسعه وب‌سایت، اپلیکیشن و محصولات دیجیتال با تمرکز بر تجربه
+            کاربری، کیفیت و خلاقیت.
+          </p>
+          <div className=" flex flex-col md:flex-row justify-center items-center gap-4 mt-10 max-w-md mx-auto">
+            <Button className="" size="lg">
+              درخواست مشاوره
+            </Button>
+            <Button className="" variant="outline" size="lg">
+              {" "}
+              مشاهده نمونه‌کارها{" "}
+            </Button>
+            {/* Scroll down animation */}
+          </div>
+          <div className="w-full flex justify-center mt-6">
             <button
               onClick={() =>
-                window.scrollBy({ top: window.innerHeight - 120, behavior: "smooth" })
+                window.scrollBy({
+                  top: window.innerHeight - 120,
+                  behavior: "smooth",
+                })
               }
               aria-label="Scroll down"
               className="flex flex-col items-center gap-2 text-muted-foreground hover:text-foreground"
@@ -52,7 +54,12 @@ export default function Home() {
                 className="w-7 h-7 animate-bounce"
                 aria-hidden="true"
               >
-                <path strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                <path
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
               <span className="text-sm">اسکرول کنید</span>
             </button>

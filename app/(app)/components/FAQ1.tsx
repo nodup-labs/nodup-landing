@@ -1,5 +1,3 @@
-import { CustomSubtitle } from "@/components/custom/subtitle";
-import { CustomTitle } from "@/components/custom/title";
 import {
   Accordion,
   AccordionContent,
